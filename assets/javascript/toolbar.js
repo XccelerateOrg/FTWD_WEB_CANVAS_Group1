@@ -44,7 +44,7 @@ $('#rectangle-btn').click(()=>{
 
 // Eraser
 $('#eraser-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new DrawingEraser(ctx);
     console.log(`Eraser: ${currentFunction}`)
 });
 
