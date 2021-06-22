@@ -1,132 +1,130 @@
 <!DOCTYPE html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/css/styles.css"
-    />
-  </head>
-  <body>
-    <nav
-      class="navbar navbar-light blue lighten-4"
-      style="background-color: #e3f2fd"
-    >
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html"
-            >Basic Canvas</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="planning.html"
-            >Planning</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="canvas.html"
-            >Implementation</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <br />
-    <br />
 
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <div id="canvasContainer">
-            <!-- Canvas Draft -->
-            <canvas
-              id="canvasDraft"
-              width="500"
-              height="500"
-            ></canvas>
-            <!-- Canvas  -->
-            <canvas
-              id="canvas"
-              width="500"
-              height="500"
-            ></canvas>
-          </div>
-        </div>
-        <div class="col-4">
-          <button
-            type="button"
-            id="lineButton"
-            class="btn btn-outline-dark waves-effect"
-          >
-            Pen
-          </button>
-          <button
-            type="button"
-            id="rectButton"
-            class="btn btn-outline-dark waves-effect"
-          >
-            Rectangle
-          </button>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+</head>
 
-          <br />
-          <hr />
-          <!-- Potential for more -->
+<body>
+  <nav class="navbar navbar-light blue lighten-4" style="background-color: #e3f2fd">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Basic Canvas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="planning.html">Planning</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="canvas.html">Implementation</a>
+      </li>
+    </ul>
+  </nav>
+  <br />
+  <br />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div id="canvasContainer">
+          <!-- Canvas Draft -->
+          <canvas id="canvasDraft" width="500" height="500"></canvas>
+          <!-- Canvas  -->
+          <canvas id="canvas" width="500" height="500"></canvas>
         </div>
       </div>
+      
+      <div class="col-4">
+        <button type="button" id="lineButton" class="btn btn-outline-dark waves-effect">
+          Pen
+        </button>
+        <button type="button" id="rectButton" class="btn btn-outline-dark waves-effect">
+          Rectangle
+        </button>
+
+        <br />
+        <hr />
+        <!-- Potential for more -->
+      </div>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Mouse Methods -->
-    <script
-      src="assets/javascript/mouseMethods.js"
-      async
-      defer
-    ></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
 
-    <!-- Line Function -->
-    <script
-      src="assets/javascript/lineFunction.js"
-      async
-      defer
-    ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
 
-    <!-- Rectangle Function -->
-    <script
-      async
-      defer
-      src="assets/javascript/rectFunction.js"
-    ></script>
-  </body>
+  <!-- Ads -->
+  <script src="assets/javascript/ads.js" async defer></script>
+
+  <!-- Canvas Common -->
+  <script src="assets/javascript/canvasCommon.js" async defer></script>
+
+  <!-- Colour -->
+  <script src="assets/javascript/colour.js" async defer></script>
+
+  <!-- Drawing Arc -->
+  <script src="assets/javascript/drawingArc.js" async defer></script>
+
+  <!-- Drawing brush -->
+  <script src="assets/javascript/drawingBrush.js" async defer></script>
+
+  <!-- Drawing Circle-->
+  <script src="assets/javascript/drawingCircle.js" async defer></script>
+
+  <!-- Drawing Curve -->
+  <script src="assets/javascript/drawingCurve.js" async defer></script>
+
+  <!-- Drawing Line -->
+  <script src="assets/javascript/drawingLine.js" async defer></script>
+
+  <!-- Drawing Polygon -->
+  <script src="assets/javascript/drawingPolygon.js" async defer></script>
+
+  <!-- Drawing Rectangle -->
+  <script src="assets/javascript/drawingRectangle.js" async defer></script>
+
+  <!-- Eraser -->
+  <script src="assets/javascript/eraser.js" async defer></script>
+
+  <!-- Export -->
+  <script src="assets/javascript/export.js" async defer></script>
+
+  <!-- Fill -->
+  <script src="assets/javascript/fill.js" async defer></script>
+
+  <!-- Filter -->
+  <script src="assets/javascript/filter.js" async defer></script>
+
+  <!-- Mouse Methods -->
+  <script src="assets/javascript/mouseMethods.js" async defer></script>
+
+  <!-- Select -->
+  <script src="assets/javascript/select.js" async defer></script>
+
+  <!-- Text -->
+  <script async defer src="assets/javascript/text.js"></script>
+
+  <!-- Toolbar -->
+  <script src="assets/javascript/toolbar.js" async defer></script>
+
+  <!-- Unro / Redo -->
+  <script src="assets/javascript/undoRedo.js" async defer></script>
+
+  <!-- Zoom -->
+  <script src="assets/javascript/zoom.js" async defer></script>
+</body>
+
 </html>
