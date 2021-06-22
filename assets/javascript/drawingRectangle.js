@@ -11,13 +11,8 @@ onMouseDown(coord,e){
     // this.ctxDraft.fillStyle = drawColor;
     //set the color of the line
     console.log("here");
-<<<<<<< HEAD
     this.ctx.fillStyle = drawColor;
     this.ctxDraft.fillStyle = drawColor;
-=======
-    this.ctx.fillStyle = "#00ff00";
-    this.ctx.fillStyle = "#00ff00";
->>>>>>> origin
     this.origX = coord[0];
     this.origY = coord[1];
     //get the starting position of the rect
