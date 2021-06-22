@@ -30,28 +30,28 @@ In the javascript folder, there are various functionalities for the canvas appli
 |       | Divide up the work                      |    M     |                |             |
 |       | Look over the code                      |    M     |                |             |
 
-| B       | Style
+| B | Style
 
-| I      | Ads (freemium, premium)   
-| B      | Canvas Common  
-| Z      | Colour         
-| I      | Drawing Arc                 
-| B      | Drawing Brush         
-| Z      | Drawing Circle                      
-| I      | Drawing Curve                       
-| B      | Drawing Line
-| Z      | Drawing Polygon         
-| I      | Drawing Rectangle               
-| B      | Eraser                        
-| Z      | Export / Download
-| I      | Fill       
-| B      | Filter    
-| Z      | Mouse               
-| I      | Select / Drag / Resize / Crop                    
-| B      | Text
-| Z      | Toolbar      
-| I      | Undo / Redo                   
-| B      | Zoom                                          
+| I | Ads (freemium, premium)  
+| B | Canvas Common (DONE)  
+| Z | Colour  
+| I | Drawing Arc  
+| B | Drawing Brush  
+| Z | Drawing Circle  
+| I | Drawing Curve (DONE)  
+| B | Drawing Line (DONE)  
+| Z | Drawing Polygon  
+| I | Drawing Rectangle (DONE)  
+| B | Eraser  
+| Z | Export / Download
+| I | Fill  
+| B | Filter  
+| Z | Mouse  
+| I | Select / Drag / Resize / Crop  
+| B | Text
+| Z | Toolbar  
+| I | Undo / Redo  
+| B | Zoom
 
 - [Further Documentation and Tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
 
