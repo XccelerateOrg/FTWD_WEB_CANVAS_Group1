@@ -1,50 +1,54 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-  <div class="field">
-    <canvas id="canvas"></canvas>
-    <div class="tools">
-      <button onClick="undo_last()" type="button" class="button">Undo</button>
-      <button type="button" class="button" id="clear-btn">Clear</button>
-      <button onClick="drawCircle()" type="button" class="button">Circle</button>
-
-
-
-
-      <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
-      <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
-      <div onClick="change_color(this)" class="color-field" style="background: green;"></div>
-      <div onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
-
-      <input onInput="draw_Color = this.value" type="color" class="color-picker">
-      <input type="range" min="1" max="100" class="pen-range" onInput="draw_Width = this.value">
-    </div>
-
+  <div class='canvas-container'>
+    <canvas id="canvas" class="canvas"></canvas>
+    <canvas id="canvasDraft" class="canvas"></canvas>
   </div>
+  <div class="btn-container">
+    <button class="btn" id="arc-btn">Arc</button>
+    <button class="btn" id="brush-btn">Brush</button>
+    <button class="btn" id="circle-btn">Circle</button>
+    <button class="btn" id="curve-btn">Curve</button>
+    <button class="btn"  id="line-btn">Line</button>
+    <button class="btn" id="polygon-btn">Polygon</button>
+    <button class="btn"  id="rectangle-btn">Rectangle</button>
+    <button class="btn" id="eraser-btn">Eraser</button>
+    <button class="btn" id="export-btn">Export</button>
+    <button class="btn" id="fill-btn">Fill</button>
+    <button class="btn" id="filter-btn">Filter</button>
+    <button class="btn" id="select-btn">Select</button>
+    <button class="btn" id="text-btn">Text</button>
+    <button class="btn" id="undo-btn">Undo</button>
+    <button class="btn" id="zoom-btn">Zoom</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.4.5/jscolor.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+  </script>
 
   <!-- Ads -->
   <script src="assets/javascript/ads.js" async defer></script>
@@ -103,7 +107,7 @@
   <!-- Toolbar -->
   <script src="assets/javascript/toolbar.js" async defer></script>
 
-  <!-- Unro / Redo -->
+  <!-- Undo / Redo -->
   <script src="assets/javascript/undoRedo.js" async defer></script>
 
   <!-- Zoom -->
