@@ -90,3 +90,4 @@ $('#zoom-btn').click(()=>{
     console.log(`Zoom: ${currentFunction}`)
 });
 
+currentFunction = new DrawingRectangle (ctx,ctxDraft)
