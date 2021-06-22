@@ -9,7 +9,10 @@ const ctx = canvas.getContext(`2d`);
 const ctxDraft = canvasDraft.getContext(`2d`);
 //set the rendering to 2d
 let restoreArray = [];
-let restoreIndex = -1;
+let reIndex = -1;
+let redoArray = [];
+let index = -1;
+
 let drawColor = "#a3d4f2"
 
 let currentFunction;
