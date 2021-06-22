@@ -8,7 +8,7 @@ $('#arc-btn').click(()=>{
 
 // Drawing Brush
 $('#brush-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new DrawingBrush(ctx,ctxDraft);
     console.log(`Drawing Brush: ${currentFunction}`)
 });
 
@@ -44,7 +44,7 @@ $('#rectangle-btn').click(()=>{
 
 // Eraser
 $('#eraser-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new DrawingEraser(ctx);
     console.log(`Eraser: ${currentFunction}`)
 });
 

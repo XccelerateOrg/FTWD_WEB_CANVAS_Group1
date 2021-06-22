@@ -12,7 +12,6 @@ let restoreArray = [];
 let restoreIndex = -1;
 let drawColor = "#a3d4f2"
 
-
 let currentFunction;
 //set a currentFunction for later use in eventListner
 
@@ -98,3 +97,33 @@ class PaintFunction{
 }
 //create a main object for all paint function, 
 //with all possible interactions with the drawing functions as methods
+
+// Utilities
+let canvasSettings = {
+  colorStroke: $("#stroke-color").val(),
+  colorFill: $("#fill-color").val(),
+  strokeSize: $("#stroke-size").val(),
+  textSize: $("#text-size").val(),
+  polygonSides: $("#poly-sides").val(),
+};
+
+$("#stroke-color")[0].oninput = function () {
+    canvasSettings.colorStroke = this.value;
+    document.documentElement.style.setProperty("--color", this.value);
+  };
+  
+  $("#fill-color")[0].oninput = function () {
+    canvasSettings.colorFill = this.value;
+  };
+  
+  $("#stroke-size")[0].oninput = function () {
+    canvasSettings.strokeSize = this.value;
+  };
+  
+  $("#poly-sides")[0].oninput = function () {
+    canvasSettings.polygonSides = this.value;
+  };
+  
+  $("#text-size")[0].oninput = function () {
+    canvasSettings.textSize = this.value;
+  };
