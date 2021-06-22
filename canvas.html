@@ -13,6 +13,7 @@
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
@@ -37,6 +38,10 @@
     <button class="btn" id="text-btn">Text</button>
     <button class="btn" id="undo-btn">Undo</button>
     <button class="btn" id="zoom-btn">Zoom</button>
+    <div class="pickr">
+    <input type="color" class="color-picker">
+  </div>
+            <input type="range" min="1" max="100" class="pen-range">
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -53,11 +58,17 @@
   <!-- Ads -->
   <script src="assets/javascript/ads.js" async defer></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
+
   <!-- Canvas Common -->
   <script src="assets/javascript/canvasCommon.js" async defer></script>
 
   <!-- Colour -->
   <script src="assets/javascript/colour.js" async defer></script>
+
+  <!-- Clear -->
+  <script src="assets/javascript/clear.js"></script>
 
   <!-- Drawing Arc -->
   <script src="assets/javascript/drawingArc.js" async defer></script>
@@ -109,6 +120,7 @@
 
   <!-- Zoom -->
   <script src="assets/javascript/zoom.js" async defer></script>
+
 </body>
 
 </html>

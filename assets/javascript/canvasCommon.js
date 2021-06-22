@@ -12,7 +12,6 @@ let restoreArray = [];
 let restoreIndex = -1;
 let drawColor = "#a3d4f2"
 
-
 let currentFunction;
 //set a currentFunction for later use in eventListner
 
@@ -24,12 +23,12 @@ let fontSize = "90px";
 
 function resizeCanvas(){
     canvas.width = 2000;
-    canvas.height = 900;
+    canvas.height = 800;
 }
 //canvas can only be resized through js or (inline??), css effect the coord system
 function resizeCanvasDraft(){
     canvasDraft.width = 2000;
-    canvasDraft.height = 900;
+    canvasDraft.height = 800;
 }
 resizeCanvas();
 resizeCanvasDraft();
@@ -98,3 +97,75 @@ class PaintFunction{
 }
 //create a main object for all paint function, 
 //with all possible interactions with the drawing functions as methods
+
+// Utilities
+let canvasSettings = {
+  colorStroke: $("#stroke-color").val(),
+  colorFill: $("#fill-color").val(),
+  strokeSize: $("#stroke-size").val(),
+  textSize: $("#text-size").val(),
+  polygonSides: $("#poly-sides").val(),
+};
+
+$("#stroke-color")[0].oninput = function () {
+    canvasSettings.colorStroke = this.value;
+    document.documentElement.style.setProperty("--color", this.value);
+  };
+  
+  $("#fill-color")[0].oninput = function () {
+    canvasSettings.colorFill = this.value;
+  };
+  
+  $("#stroke-size")[0].oninput = function () {
+    canvasSettings.strokeSize = this.value;
+  };
+  
+  $("#poly-sides")[0].oninput = function () {
+    canvasSettings.polygonSides = this.value;
+  };
+  
+  $("#text-size")[0].oninput = function () {
+    canvasSettings.textSize = this.value;
+  };
+
+const pickr = Pickr.create({
+    el: '.color-picker',
+    theme: 'classic', // or 'monolith', or 'nano'
+
+    swatches: [
+        'rgba(244, 67, 54, 1)',
+        'rgba(233, 30, 99, 0.95)',
+        'rgba(156, 39, 176, 0.9)',
+        'rgba(103, 58, 183, 0.85)',
+        'rgba(63, 81, 181, 0.8)',
+        'rgba(33, 150, 243, 0.75)',
+        'rgba(3, 169, 244, 0.7)',
+        'rgba(0, 188, 212, 0.7)',
+        'rgba(0, 150, 136, 0.75)',
+        'rgba(76, 175, 80, 0.8)',
+        'rgba(139, 195, 74, 0.85)',
+        'rgba(205, 220, 57, 0.9)',
+        'rgba(255, 235, 59, 0.95)',
+        'rgba(255, 193, 7, 1)'
+    ],
+
+    components: {
+
+        // Main components
+        preview: true,
+        opacity: true,
+        hue: true,
+
+        // Input / output Options
+        interaction: {
+            hex: true,
+            rgba: true,
+            hsla: true,
+            hsva: true,
+            cmyk: true,
+            input: true,
+            clear: true,
+            save: true
+        }
+    }
+});
