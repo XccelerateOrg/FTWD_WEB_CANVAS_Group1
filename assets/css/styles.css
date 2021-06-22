@@ -1,65 +1,41 @@
-
-body {
-    margin: 0px;
-    padding: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    background: #313131;
+body{
+    background-color: rgb(189, 189, 189);
 }
 
-#canvas {
-    position: absolute;
-    box-shadow: -3px 2px 9px 6px black;
-    cursor: pointer;
-    /* background-color: #FFF; */
+.canvas{
+    background-color: #FFF;
+    border:1px black dotted;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px
 }
 
 #canvasDraft{
     background-color: transparent;
+    /* z-index: -1; */
 }
 
-.tools{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 15px;
+body{
+    overflow:hidden;
+}
+#canvas-container{
+    height:720px;
+} 
+
+.btn-container{
+    position: fixed;
+    top: 1000px;
 }
 
-.tools .color-field {
-    height: 40px;
-    width: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    cursor: pointer;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 2px solid white;
-    align-self: center;
-    margin: 0 10px;
+.color-container{
+    position: absolute;
+    top: 1000px;
+    left: 300px;
 }
 
-.tools .button {
-align-self: center;
-width: 100px;
-height: 40px;
-border: 2px solid white;
-cursor: pointer;
-color: white;
-background: #222;
-font-weight: bold;
-margin: 0 10px;
-
+.color-container p{
+    font-size: 30px;
+    padding: 30px;
 }
-
-.color-picker {
-    align-self: center;
-    margin: 0 10px;
-    height: 50px;
-}
-
-.pen-range {
-    align-self: center;
-    margin: 0 10px;
-}
-

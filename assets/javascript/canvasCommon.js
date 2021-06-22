@@ -1,5 +1,4 @@
 const canvas = $('#canvas')[0];
-console.log(canvas)
 //set a var to the targeted id
 //this retrieves the node in the DOM representing the <canvas>
 const canvasDraft = $(`#canvasDraft`)[0];
@@ -11,7 +10,8 @@ const ctxDraft = canvasDraft.getContext(`2d`);
 //set the rendering to 2d
 let restoreArray = [];
 let restoreIndex = -1;
-let drawColor = "#FFF";
+let drawColor = "#a3d4f2"
+
 
 let currentFunction;
 //set a currentFunction for later use in eventListner
@@ -22,8 +22,6 @@ let dragging = false;
 let fontFam = "Georgia, serif";
 let fontSize = "90px";
 
-// canvas.width = 2560;
-// canvas.height = 800;
 function resizeCanvas(){
     canvas.width = 2000;
     canvas.height = 900;
@@ -36,16 +34,12 @@ function resizeCanvasDraft(){
 resizeCanvas();
 resizeCanvasDraft();
 //canvas can only be resized through js or (inline??)
-function backgroundColor(){
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
-backgroundColor();
+
 
 $(`#canvasDraft`).mousedown(function(e){
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
-    console.log(`b`, [mouseX,mouseY])
+    console.log([mouseX,mouseY])
     currentFunction.onMouseDown([mouseX,mouseY],e);
     dragging = true;
 });
