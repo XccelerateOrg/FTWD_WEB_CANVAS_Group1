@@ -1,4 +1,5 @@
 const canvas = $('#canvas')[0];
+console.log(canvas)
 //set a var to the targeted id
 //this retrieves the node in the DOM representing the <canvas>
 const canvasDraft = $(`#canvasDraft`)[0];

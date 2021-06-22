@@ -10,7 +10,7 @@ class DrawingRectangle extends PaintFunction{
 onMouseDown(coord,e){
     this.ctxDraft.fillStyle = drawColor;
     //set the color of the line
-
+    
     this.origX = coord[0];
     this.origY = coord[1];
     //get the starting position of the rect

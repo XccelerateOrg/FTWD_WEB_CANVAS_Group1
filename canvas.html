@@ -7,6 +7,7 @@
   <title></title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css" />
@@ -15,15 +16,13 @@
 
 <body>
   <div class="field">
-    <canvas id="canvas"></canvas>
-    <canvas id="canvasDraft"></canvas>
+    <canvas id="canvas" class="canvas"></canvas>
+    <canvas id="canvasDraft" class="canvas"></canvas>
     <div class="tools">
       <button class="button" id="undo">Undo</button>
       <button class="button" id="clear-btn">Clear</button>>
       <button class="button" id="circle-btn">Circle</button>>
       <button class="button" id="rect-btn">Rect</button>>
-
-
 
 
       <div class="color-field" style="background: red;"></div>
@@ -36,6 +35,8 @@
     </div>
 
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
