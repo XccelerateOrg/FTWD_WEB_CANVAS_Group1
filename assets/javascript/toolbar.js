@@ -38,7 +38,7 @@ $('#polygon-btn').click(()=>{
 
 // Drawing Rectangle
 $('#rectangle-btn').click(()=>{
-    currentFunction = new DrawingRectangle(ctx,ctxDraft);
+    currentFunction = new DrawingRectangle (ctx,ctxDraft);
     console.log(`Drawing Rectangle: ${currentFunction}`)
 });
 
