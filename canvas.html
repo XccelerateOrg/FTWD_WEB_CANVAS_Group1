@@ -14,57 +14,37 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-light blue lighten-4" style="background-color: #e3f2fd">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="index.html">Basic Canvas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="planning.html">Planning</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="canvas.html">Implementation</a>
-      </li>
-    </ul>
-  </nav>
-  <br />
-  <br />
+  <div class="field">
+    <canvas id="canvas"></canvas>
+    <div class="tools">
+      <button onClick="undo_last()" type="button" class="button">Undo</button>
+      <button type="button" class="button" id="clear-btn">Clear</button>
+      <button onClick="drawCircle()" type="button" class="button">Circle</button>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-8">
-        <div id="canvasContainer">
-          <!-- Canvas Draft -->
-          <canvas id="canvasDraft" width="500" height="500"></canvas>
-          <!-- Canvas  -->
-          <canvas id="canvas" width="500" height="500"></canvas>
-        </div>
-      </div>
-      
-      <div class="col-4">
-        <button type="button" id="lineButton" class="btn btn-outline-dark waves-effect">
-          Pen
-        </button>
-        <button type="button" id="rectButton" class="btn btn-outline-dark waves-effect">
-          Rectangle
-        </button>
 
-        <br />
-        <hr />
-        <!-- Potential for more -->
-      </div>
+
+
+      <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
+      <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
+      <div onClick="change_color(this)" class="color-field" style="background: green;"></div>
+      <div onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
+
+      <input onInput="draw_Color = this.value" type="color" class="color-picker">
+      <input type="range" min="1" max="100" class="pen-range" onInput="draw_Width = this.value">
     </div>
+
   </div>
+
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-- Ads -->
   <script src="assets/javascript/ads.js" async defer></script>
