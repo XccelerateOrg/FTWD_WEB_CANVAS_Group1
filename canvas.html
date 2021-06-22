@@ -8,12 +8,12 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
@@ -27,9 +27,9 @@
     <button class="btn" id="brush-btn">Brush</button>
     <button class="btn" id="circle-btn">Circle</button>
     <button class="btn" id="curve-btn">Curve</button>
-    <button class="btn"  id="line-btn">Line</button>
+    <button class="btn" id="line-btn">Line</button>
     <button class="btn" id="polygon-btn">Polygon</button>
-    <button class="btn"  id="rectangle-btn">Rectangle</button>
+    <button class="btn" id="rectangle-btn">Rectangle</button>
     <button class="btn" id="eraser-btn">Eraser</button>
     <button class="btn" id="export-btn">Export</button>
     <button class="btn" id="fill-btn">Fill</button>
@@ -38,10 +38,10 @@
     <button class="btn" id="text-btn">Text</button>
     <button class="btn" id="undo-btn">Undo</button>
     <button class="btn" id="zoom-btn">Zoom</button>
-    <div class="pickr">
-    <input type="color" class="color-picker">
-  </div>
-            <input type="range" min="1" max="100" class="pen-range">
+    
+      <input type="color" class="color-picker">
+    
+    <input type="range" min="1" max="100" class="pen-range">
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -53,13 +53,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-- Ads -->
   <script src="assets/javascript/ads.js" async defer></script>
 
   <!-- Color Pickr-->
   <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
   <!-- Canvas Common -->
   <script src="assets/javascript/canvasCommon.js" async defer></script>
 
@@ -119,6 +120,50 @@
 
   <!-- Zoom -->
   <script src="assets/javascript/zoom.js" async defer></script>
+
+  <script>
+    const pickr = Pickr.create({
+    el: '.color-picker',
+    theme: 'classic', // or 'monolith', or 'nano'
+
+    swatches: [
+        'rgba(244, 67, 54, 1)',
+        'rgba(233, 30, 99, 0.95)',
+        'rgba(156, 39, 176, 0.9)',
+        'rgba(103, 58, 183, 0.85)',
+        'rgba(63, 81, 181, 0.8)',
+        'rgba(33, 150, 243, 0.75)',
+        'rgba(3, 169, 244, 0.7)',
+        'rgba(0, 188, 212, 0.7)',
+        'rgba(0, 150, 136, 0.75)',
+        'rgba(76, 175, 80, 0.8)',
+        'rgba(139, 195, 74, 0.85)',
+        'rgba(205, 220, 57, 0.9)',
+        'rgba(255, 235, 59, 0.95)',
+        'rgba(255, 193, 7, 1)'
+    ],
+
+    components: {
+
+        // Main components
+        preview: true,
+        opacity: true,
+        hue: true,
+
+        // Input / output Options
+        interaction: {
+            hex: true,
+            rgba: true,
+            hsla: true,
+            hsva: true,
+            cmyk: true,
+            input: true,
+            clear: true,
+            save: true
+        }
+    }
+});
+  </script>
 
 </body>
 
