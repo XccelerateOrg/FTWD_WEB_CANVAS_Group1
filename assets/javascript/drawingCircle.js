@@ -8,6 +8,7 @@ class DrawingCircle extends PaintFunction{
         this.ctxDraft.fillStyle = drawColor;
         this.origX = coord[0];
         this.origY = coord[1];
+        console.log(coord)
     }
     onDragging(coord,event){
         this.ctxDraft.beginPath();
@@ -62,3 +63,5 @@ class DrawingCircle extends PaintFunction{
     onMouseEnter(){}
 
 }
+
+console.log(`a`)

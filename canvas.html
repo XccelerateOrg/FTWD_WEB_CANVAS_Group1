@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <head>
   <meta charset="utf-8" />
@@ -16,18 +16,20 @@
 <body>
   <div class="field">
     <canvas id="canvas"></canvas>
+    <canvas id="canvasDraft"></canvas>
     <div class="tools">
-      <button onClick="undo_last()" type="button" class="button">Undo</button>
-      <button type="button" class="button" id="clear-btn">Clear</button>
-      <button onClick="drawCircle()" type="button" class="button">Circle</button>
+      <button class="button" id="undo">Undo</button>
+      <button class="button" id="clear-btn">Clear</button>>
+      <button class="button" id="circle-btn">Circle</button>>
+      <button class="button" id="rect-btn">Rect</button>>
 
 
 
 
-      <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
-      <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
-      <div onClick="change_color(this)" class="color-field" style="background: green;"></div>
-      <div onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
+      <div class="color-field" style="background: red;"></div>
+      <div class="color-field" style="background: blue;"></div>
+      <div class="color-field" style="background: green;"></div>
+      <div class="color-field" style="background: yellow;"></div>
 
       <input onInput="draw_Color = this.value" type="color" class="color-picker">
       <input type="range" min="1" max="100" class="pen-range" onInput="draw_Width = this.value">

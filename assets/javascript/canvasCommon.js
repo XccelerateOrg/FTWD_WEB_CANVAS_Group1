@@ -10,7 +10,7 @@ const ctxDraft = canvasDraft.getContext(`2d`);
 //set the rendering to 2d
 let restoreArray = [];
 let restoreIndex = -1;
-let drawColor = "#a3d4f2"
+let drawColor = "#FFF";
 
 let currentFunction;
 //set a currentFunction for later use in eventListner
@@ -21,6 +21,8 @@ let dragging = false;
 let fontFam = "Georgia, serif";
 let fontSize = "90px";
 
+// canvas.width = 2560;
+// canvas.height = 800;
 function resizeCanvas(){
     canvas.width = 2000;
     canvas.height = 900;
@@ -33,12 +35,16 @@ function resizeCanvasDraft(){
 resizeCanvas();
 resizeCanvasDraft();
 //canvas can only be resized through js or (inline??)
-
+function backgroundColor(){
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+backgroundColor();
 
 $(`#canvasDraft`).mousedown(function(e){
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
-    console.log([mouseX,mouseY])
+    console.log(`b`, [mouseX,mouseY])
     currentFunction.onMouseDown([mouseX,mouseY],e);
     dragging = true;
 });
@@ -85,12 +91,6 @@ $(`#canvasDraft`).mouseenter(function(e){
     currentFunction.onMouseEnter([mouseX,mouseY],e);
 });
 //noone cares
-
-if ( e.type != 'mouseout' ){
-    restore_array.push(context.getImageData(0, 0, canvas.width, canvas.height));
-    index += 1;
-    console.log(restore_array);
-}
 
 class PaintFunction{
     constructor(){}
