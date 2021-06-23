@@ -32,6 +32,8 @@ function resizeCanvasDraft(){
     canvasDraft.width = 1800;
     canvasDraft.height = 800;
 }
+
+
 resizeCanvas();
 resizeCanvasDraft();
 //canvas can only be resized through js or (inline??)
@@ -186,6 +188,10 @@ console.log(canvasSettings.colorFillArray)
     console.log('Event: "save"', color, instance);
     console.log(color.toRGBA().toString(3))
     canvasSettings.colorBackground = color.toRGBA().toString(3)
+    ctx.fillStyle = canvasSettings.colorBackground
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+    index += 1;
   })
 
   $("#pen-range").on("change",(e)=>{
