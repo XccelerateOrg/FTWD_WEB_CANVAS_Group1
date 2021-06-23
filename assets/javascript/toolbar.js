@@ -1,7 +1,7 @@
 // Clear
 $('#clear-btn').click(()=>{
-    currentFunction = new DrawingArc(ctx,ctxDraft);
-    console.log(`Drawing Arc: ${currentFunction}`)
+    clear()
+    console.log(`Cleared`)
 });
 
 // Drawing Arc

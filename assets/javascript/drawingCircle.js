@@ -15,6 +15,8 @@ class DrawingCircle extends PaintFunction{
         this.ctx.beginPath()
         this.origX = coord[0];
         this.origY = coord[1];
+        this.centerX = (this.origX + coord[0])/2;
+        this.centerY = (this.origY + coord[1])/2;
         console.log(coord)
     }
     onDragging(coord,event){
@@ -54,7 +56,7 @@ class DrawingCircle extends PaintFunction{
         //when user mouse up, register the circle to the ctx real
         this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         //clear the rect from the draft
-        this.ctx.beginPath()
+        // this.ctx.beginPath()
 
         //same method used to draw circle as above
         // if(coord[0]-this.centerX >= 0){
