@@ -54,4 +54,4 @@ class DrawingArc extends PaintFunction{
         } 
     }
         
-    }
+}

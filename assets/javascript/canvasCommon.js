@@ -24,12 +24,12 @@ let fontFam = "Georgia, serif";
 let fontSize = "90px";
 
 function resizeCanvas(){
-    canvas.width = 2000;
+    canvas.width = 1800;
     canvas.height = 800;
 }
 //canvas can only be resized through js or (inline??), css effect the coord system
 function resizeCanvasDraft(){
-    canvasDraft.width = 2000;
+    canvasDraft.width = 1800;
     canvasDraft.height = 800;
 }
 resizeCanvas();
@@ -161,15 +161,19 @@ let canvasSettings = {
   colorBackground: "#FFFFFF",
   colorStroke: "#000000" ,
   colorFill: "#000000",
+  colorFillArray: [],
   strokeSize: 10,
   // textSize: 
   polygonSides: 3
 };
-
+console.log(canvasSettings.colorFillArray)
   pickrFill.on('save', (color, instance) => {
     console.log('Event: "save"', color, instance);
     console.log(color.toRGBA().toString(3))
+    console.log(color.toRGBA())
     canvasSettings.colorFill = color.toRGBA().toString(3)
+    canvasSettings.colorFillArray = color.toRGBA()
+    console.log(canvasSettings.colorFillArray)
   })
   
   pickrStroke.on('save', (color, instance) => {
@@ -193,3 +197,4 @@ let canvasSettings = {
     console.log($(e.target).val())
     canvasSettings.strokeSize = $(e.target).val()
   })
+

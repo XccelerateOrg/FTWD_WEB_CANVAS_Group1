@@ -60,7 +60,7 @@ $('#export-btn').click(()=>{
 
 // Fill
 $('#fill-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new Fill(ctx, ctxDraft)
     console.log(`Fill: ${currentFunction}`)
 });
 
