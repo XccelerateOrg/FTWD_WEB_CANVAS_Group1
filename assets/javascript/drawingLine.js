@@ -16,22 +16,28 @@ class DrawingLine extends PaintFunction {
     this.ctx.beginPath();
     this.ctx.moveTo(coord[0],coord[1]);
   }
-
+  
   onDragging(coord,e){
-    this.ctxDraft.beginPath();
     this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-
+    this.ctxDraft.beginPath();
+    
     this.ctxDraft.moveTo(this.origX, this.origY);
     this.ctxDraft.lineTo(coord[0],coord[1]);
-
-
+    
+    
     this.ctxDraft.stroke();
+    this.ctx.stroke();
   }  
-
-
+  
+  
   onMouseUp(coord, e) {
+    this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.ctx.lineTo(coord[0],coord[1]);
     this.ctx.stroke();
+    restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+    index += 1;
+    console.log(`index`, index);
+    console.log(`array`, restoreArray);
   }
 
 }
