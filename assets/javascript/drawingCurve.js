@@ -47,8 +47,32 @@
             
         }
     
-        onMouseMove(){
-            
+        onMouseMove(coord, e){
+            if(this.click == 1){
+                this.ctxDraft.beginPath();
+                this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+                
+                this.ctxDraft.moveTo(this.origX, this.origY);
+                this.ctxDraft.lineTo(coord[0], coord[1]);
+
+                this.ctxDraft.stroke();
+            } else if (this.click == 2){
+                this.ctxDraft.beginPath();
+                this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+
+                this.ctxDraft.moveTo(this.origX, this.origY);
+                this.ctxDraft.quadraticCurveTo(coord[0], coord[1], this.endX, this.endY);
+
+                this.ctxDraft.stroke();
+            } else if (this.click == 3){
+                this.ctxDraft.beginPath();
+                this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+
+                this.ctxDraft.moveTo(this.origX, this.origY);
+                this.ctxDraft.bezierCurveTo(this.cpX, this.cpY, coord[0], coord[1], this.endX, this.endY);
+                
+                this.ctxDraft.stroke();
+            }
         }
             
         }

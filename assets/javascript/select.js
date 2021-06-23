@@ -1,26 +1,44 @@
-class Select extends PaintFunction{
-    constructor(ctx, ctxDraft){
-        super();
-        this.ctx = ctx;
-        this.ctxDraft = ctxDraft;
-    }
+// const canvas = new Canvas('canvas', 500, 500);
 
-    onMouseDown(coord, e){
-        this.origX = coord[0];
-        this.origY = coord[1];
-        this.ctx.strokeStyle = "#000"
-        this.ctxDraft.strokeStyle = "#000"
-    }
+// let image = new Image();
+// image.src = 'https://dummyimage.com/100x100/000/fff';
 
-    onDragging(coord, e){
-        this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-        this.ctxDraft.strokeRect(this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY)
-    }
+// let moveImage = false;
 
-    onMouseUp(coord, e){
-        this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-        this.ctx.strokeRect(this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY);
-        restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
-        index += 1;
-    }
-}
+// image.onload = function () {
+
+//   image = {
+//     image: image,
+//     x: canvas.width / 2 - image.width / 2, // centered in canvas
+//     y: canvas.height / 2 - image.height / 2 // centered in canvas
+//   };
+
+//   canvas.on('draw', function ( renderer ) {
+// 		renderer.clear();
+//     renderer.drawImage(image.image, image.x, image.y);
+//   });
+
+//   const pointer = new Pointer( canvas.element );
+
+//   pointer.on('move', function ( event ) {
+
+//     if(moveImage) {
+
+//       image.x += (event.x - pointer.getMoveHistory(-2).x);
+//       image.y += (event.y - pointer.getMoveHistory(-2).y);
+
+//     }
+
+//   });
+
+//   pointer.on('down', function () {
+//     moveImage = pointer.touches({ x: image.x, y: image.y, width: image.image.width, height: image.image.height });
+//   });
+
+//   pointer.on('up', function () {
+//     moveImage = false;
+//   });
+
+//   canvas.start();
+
+// };
