@@ -1,6 +1,6 @@
 // Clear
 $('#clear-btn').click(()=>{
-    clear()
+    clear();
     console.log(`Cleared`)
 });
 
@@ -89,12 +89,26 @@ $('#undo-btn').click(()=>{
     console.log(`undo`)
 });
 
+function KeyPress(e) {
+    var evtobj = window.event ? event : e
+    console.log(evtobj.key)
+    //Do action on CTRL + Z
+    if (evtobj.keyCode == 90 && evtobj.ctrlKey || evtobj.keyCode == 90 && evtobj.metaKey && evtobj.shiftKey == false) {
+        undo()
+        console.log("Ctrl + Z Pressed");
+    }
+    if (evtobj.key == "y" && evtobj.ctrlKey || evtobj.keyCode == 90 && evtobj.shiftKey && evtobj.metaKey) {
+        redo()
+        console.log("Ctrl + shift + Z Pressed");
+    }
+
+}
+document.onkeydown = KeyPress;
 // Redo
 $(`#redo-btn`).click(()=>{
     redo();
     console.log(`redo`)
 })
-
 
 // Zoom
 $('#zoom-btn').click(()=>{
