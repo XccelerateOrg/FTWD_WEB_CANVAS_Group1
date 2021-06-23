@@ -1,6 +1,6 @@
 function filter(){
     console.log(`blur firing`)
-    ctx.canvas.style.filter = `blur(4px)`
+    ctx.canvas.style.filter = `blur(4px)` 
     // grayscale(${this.grayscale.value}%) brightness(${this.brightness.value}%) invert(${this.invert.value}%) opacity(${this.opacity.value}%)`
 }
 
