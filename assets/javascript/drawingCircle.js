@@ -43,11 +43,11 @@ class DrawingCircle extends PaintFunction{
             this.ctxDraft.arc(this.centerX, this.centerY, radius, 0, 2*Math.PI)
         }
         
+
         // set contextDraft fill and stroke
         this.ctxDraft.fill();
         this.ctxDraft.stroke();
         //make new circle
-        
         //this function is triggered every (px??) user is dragging
         //the X,Y is constanly updating
     }
