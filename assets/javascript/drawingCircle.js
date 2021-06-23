@@ -6,7 +6,7 @@ class DrawingCircle extends PaintFunction{
     }
     onMouseDown(coord,event){
         this.ctxDraft.fillStyle = canvasSettings.colorFill;
-        this.ctx.fill();
+        this.ctxDraft.fill();
         this.origX = coord[0];
         this.origY = coord[1];
         console.log(coord)
@@ -17,7 +17,9 @@ class DrawingCircle extends PaintFunction{
         //whenever a new X,Y is registered, clear the old circle
 
         this.ctxDraft.fillStyle = canvasSettings.colorFill;
-        this.ctx.fill();
+        this.ctxDraft.fill();
+        this.ctxDraft.strokeStyle = canvasSettings.colorStroke
+        this.ctxDraft.stroke();
         //set the color to the reg color
         this.centerX = (this.origX + coord[0])/2;
         this.centerY = (this.origY + coord[1])/2;
@@ -36,9 +38,9 @@ class DrawingCircle extends PaintFunction{
             this.ctxDraft.arc(this.centerX, this.centerY, radius, 0, 2*Math.PI)
         }
         
+        this.ctxDraft.strokeStyle = canvasSettings.colorStroke
         this.ctxDraft.stroke();
         //make new circle
-        
         //this function is triggered every (px??) user is dragging
         //the X,Y is constanly updating
     }
@@ -47,7 +49,7 @@ class DrawingCircle extends PaintFunction{
     onMouseUp(coord){
         //when user mouse up, register the circle to the ctx real
         this.ctx.fillStyle = canvasSettings.colorFill;
-        this.ctx.fill();
+        // this.ctx.fill();
 
         //set the color for the ctx real
 
@@ -61,7 +63,9 @@ class DrawingCircle extends PaintFunction{
         } else {
         this.ctx.arc(this.centerX, this.centerY, (this.centerX - coord[0]), 0, 2*Math.PI)
         }
-        this.ctx.stroke()
+        // this.ctx.strokeStyle = canvasSettings.colorStroke;
+        // this.ctx.stroke()
+        this.ctx.fill();
         restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
         index += 1;
     }
