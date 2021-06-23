@@ -1,6 +1,6 @@
 // Clear
 $('#clear-btn').click(()=>{
-    clear()
+    clear();
     console.log(`Cleared`)
 });
 
