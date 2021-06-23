@@ -14,9 +14,6 @@ let reIndex = -1;
 let redoArray = [];
 let index = -1;
 
-let drawColor = "#a3d4f2"
-
-
 let currentFunction;
 //set a currentFunction for later use in eventListner
 
@@ -164,9 +161,9 @@ let canvasSettings = {
   colorBackground: "#FFFFFF",
   colorStroke: "#000000" ,
   colorFill: "#000000",
-  strokeSize: 10
+  strokeSize: 10,
   // textSize: 
-  // polygonSides: $("#poly-sides").val(),
+  polygonSides: 3
 };
 
   pickrFill.on('save', (color, instance) => {
@@ -192,9 +189,7 @@ let canvasSettings = {
     canvasSettings.strokeSize = $(e.target).val()
   })
 
-
-function background(){
-ctx.fillStyle = "white";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
-background();
+  $("#sides-no").on("change",(e)=>{
+    console.log($(e.target).val())
+    canvasSettings.strokeSize = $(e.target).val()
+  })
