@@ -65,9 +65,9 @@ body{
     padding: 30px;
 } */
 
-.color-picker {
+.color-picker-wrapper {
   /* align-self: center; */
-  margin: 0 10px;
+  margin: 10px;
   height: 50px;
   width: 150px;
 }
@@ -75,4 +75,6 @@ body{
 .pen-range {
   align-self: center;
   margin: 0 10px;
+  width: 150px;
 }
+

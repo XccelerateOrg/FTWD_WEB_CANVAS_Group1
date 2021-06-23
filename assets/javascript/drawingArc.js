@@ -1,4 +1,4 @@
-class DrawingCurve extends PaintFunction{
+class DrawingArc extends PaintFunction{
     constructor(ctx,ctxDraft){
         super();
         this.ctx = ctx;

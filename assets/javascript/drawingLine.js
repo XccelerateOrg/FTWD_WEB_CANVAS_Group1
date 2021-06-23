@@ -7,6 +7,10 @@ class DrawingLine extends PaintFunction {
 
 
   onMouseDown(coord, e) {
+    this.ctxDraft.strokeStyle = canvasSettings.colorStroke;
+    this.ctx.strokeStyle = canvasSettings.colorStroke;
+    this.ctxDraft.lineWidth = canvasSettings.strokeSize;
+    this.ctx.lineWidth = canvasSettings.strokeSize;
     this.origX = coord[0];
     this.origY = coord[1];
     this.ctx.beginPath();
