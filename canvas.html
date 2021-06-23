@@ -24,6 +24,7 @@
     <canvas id="canvasDraft" class="canvas"></canvas>
   </div>
   <div class="btn-container">
+   
     <button class="btn" id="arc-btn">Arc</button>
     <button class="btn" id="brush-btn">Brush</button>
     <button class="btn" id="circle-btn">Circle</button>
@@ -32,7 +33,9 @@
     <button class="btn" id="polygon-btn">Polygon</button>
     <button class="btn" id="rectangle-btn">Rectangle</button>
     <button class="btn" id="eraser-btn">Eraser</button>
-    <button class="btn" id="export-btn">Export</button>
+    <a id="export-btn" download="canvas.png">
+    <button class="btn" id="export-btn" onClick="download()">Export</button>
+  </a>
     <button class="btn" id="fill-btn">Fill</button>
     <button class="btn" id="filter-btn">Filter</button>
     <button class="btn" id="select-btn">Select</button>
