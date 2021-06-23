@@ -57,6 +57,15 @@ body{
   /* display: inline-block; */
 }
 
+#export-btnPNG {
+  padding: 3px;
+
+}
+#export-btnJPG {
+  padding: 3px;
+
+}
+
 
 /* .color-container{
     position: absolute;
