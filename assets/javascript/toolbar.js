@@ -62,7 +62,8 @@ $('#fill-btn').click(()=>{
 
 // Filter
 $('#filter-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    // currentFunction = new filterBlur(ctx,ctxDraft);
+    filter()
     console.log(`Filter: ${currentFunction}`)
 });
 

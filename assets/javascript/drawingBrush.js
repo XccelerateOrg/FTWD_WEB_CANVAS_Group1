@@ -5,7 +5,7 @@ class DrawingBrush extends PaintFunction{
     }
     onMouseDown(coord,event){
         this.ctx.strokeStyle = canvasSettings.colorStroke;
-        this.ctx.lineJoin = "round";
+        this.ctx.lineCap = "round";
         this.ctx.lineWidth = canvasSettings.strokeSize;
         this.ctx.beginPath();
         this.ctx.moveTo(coord[0],coord[1]);
