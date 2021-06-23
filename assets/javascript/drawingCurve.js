@@ -44,7 +44,8 @@
             this.ctx.moveTo(this.origX, this.origY);
             this.ctx.bezierCurveTo(this.cpX, this.cpY, this.cpX1, this.cpY1, this.endX, this.endY);
             this.ctx.stroke();
-            
+            restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+            index += 1;
         }
     
         onMouseMove(coord, e){
