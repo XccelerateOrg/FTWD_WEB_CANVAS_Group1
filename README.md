@@ -34,15 +34,16 @@ In the javascript folder, there are various functionalities for the canvas appli
 
 | I | Ads (freemium, premium)  
 | B | Canvas Common (DONE)  
+| B | Clear
 | Z | Colour  
-| I | Drawing Arc  
-| B | Drawing Brush  
-| Z | Drawing Circle  
-| I | Drawing Curve (DONE)  
+| I | Drawing Arc (add moving point, change colorStroke)
+| B | Drawing Brush (make it smoother)
+| Z | Drawing Circle (change colorFill, colorStroke)
+| I | Drawing Curve
 | B | Drawing Line (DONE)  
 | Z | Drawing Polygon  
-| I | Drawing Rectangle (DONE)  
-| B | Eraser  
+| I | Drawing Rectangle (change colorFill, colorStroke))  
+| B | Eraser (DONE, add layers & use alternative way to erase)
 | Z | Export / Download
 | I | Fill  
 | B | Filter  

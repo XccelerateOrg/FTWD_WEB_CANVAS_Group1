@@ -2,7 +2,7 @@
 
 // Drawing Arc
 $('#arc-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new DrawingArc(ctx,ctxDraft);
     console.log(`Drawing Arc: ${currentFunction}`)
 });
 
