@@ -21,8 +21,10 @@ class DrawingEraser extends PaintFunction{
     onMouseMove(){}
     onMouseUp(){
         this.ctx.closePath();
-        this.ctx.stroke();
+        this.ctx.stroke(); 
         this.onFinish();
+        restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+        index += 1;   
     }
     onMouseLeave(coord,e){
         this.ctx.closePath();
@@ -36,7 +38,7 @@ class DrawingEraser extends PaintFunction{
         this.ctx.lineTo(x,y);
         this.ctx.moveTo(x,y);
         this.ctx.closePath();
-        this.ctx.stroke();   
+        this.ctx.stroke();
     }
 //     // onFinish(){
 //     //     canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount] = new Image();

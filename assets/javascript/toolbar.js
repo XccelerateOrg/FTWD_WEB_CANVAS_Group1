@@ -68,7 +68,7 @@ $('#filter-btn').click(()=>{
 
 // Select
 $('#select-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new Select (ctx,ctxDraft);
     console.log(`Select: ${currentFunction}`)
 });
 

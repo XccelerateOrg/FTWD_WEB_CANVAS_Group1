@@ -38,7 +38,8 @@ class DrawingArc extends PaintFunction{
         this.ctx.moveTo(this.origX, this.origY);
         this.ctx.quadraticCurveTo(this.cpX, this.cpY, this.endX, this.endY);
         this.ctx.stroke();
-        
+        restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+        index += 1;
     }
 
     onMouseMove(coord, e){

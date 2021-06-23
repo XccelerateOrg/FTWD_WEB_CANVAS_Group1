@@ -45,8 +45,8 @@ onMouseUp(coord){
     this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     //clear the rect from the draft
 
-    this.ctx.fillRect(this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY)
-    restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height))
+    this.ctx.fillRect(this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY);
+    restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
     index += 1;
 }
 onMouseLeave(){}

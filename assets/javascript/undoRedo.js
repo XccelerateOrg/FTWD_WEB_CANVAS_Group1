@@ -12,6 +12,7 @@ function undo() {
         } else {
             console.log(`index > 0`)
             ctx.putImageData(restoreArray[index], 0, 0);
+            console.log(restoreArray[index])
             console.log(`index > 0 done`)
         };
     }

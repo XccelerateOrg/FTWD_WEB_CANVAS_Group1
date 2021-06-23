@@ -62,6 +62,8 @@ class DrawingCircle extends PaintFunction{
         this.ctx.arc(this.centerX, this.centerY, (this.centerX - coord[0]), 0, 2*Math.PI)
         }
         this.ctx.stroke()
+        restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+        index += 1;
     }
     onMouseLeave(){}
     onMouseEnter(){}
