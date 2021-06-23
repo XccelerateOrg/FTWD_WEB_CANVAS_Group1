@@ -5,7 +5,8 @@ class DrawingCircle extends PaintFunction{
         this.ctxDraft = ctxDraft;
     }
     onMouseDown(coord,event){
-        this.ctxDraft.fillStyle = drawColor;
+        this.ctxDraft.fillStyle = canvasSettings.colorFill;
+        this.ctx.fill();
         this.origX = coord[0];
         this.origY = coord[1];
         console.log(coord)
@@ -15,7 +16,8 @@ class DrawingCircle extends PaintFunction{
         this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         //whenever a new X,Y is registered, clear the old circle
 
-        this.ctxDraft.fillStyle = drawColor;
+        this.ctxDraft.fillStyle = canvasSettings.colorFill;
+        this.ctx.fill();
         //set the color to the reg color
         this.centerX = (this.origX + coord[0])/2;
         this.centerY = (this.origY + coord[1])/2;
@@ -44,7 +46,9 @@ class DrawingCircle extends PaintFunction{
 
     onMouseUp(coord){
         //when user mouse up, register the circle to the ctx real
-        this.ctx.fillStyle = drawColor
+        this.ctx.fillStyle = canvasSettings.colorFill;
+        this.ctx.fill();
+
         //set the color for the ctx real
 
         this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
