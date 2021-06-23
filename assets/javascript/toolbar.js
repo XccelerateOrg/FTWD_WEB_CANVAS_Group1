@@ -89,11 +89,30 @@ $('#undo-btn').click(()=>{
     console.log(`undo`)
 });
 
+function KeyPress(e) {
+    var evtobj = window.event ? event : e
+    console.log(evtobj.key)
+    //Do action on CTRL + Z
+    if (evtobj.keyCode == 90 && evtobj.ctrlKey) {
+        undo()
+        console.log("Ctrl + Z Pressed");
+    }
+    if (evtobj.key == "y" && evtobj.ctrlKey) {
+        redo()
+        console.log("Ctrl + Z Pressed");
+    }
+
+}
+document.onkeydown = KeyPress;
 // Redo
 $(`#redo-btn`).click(()=>{
     redo();
     console.log(`redo`)
 })
+
+
+
+
 
 
 // Zoom
