@@ -57,10 +57,22 @@ class DrawingCircle extends PaintFunction{
         this.ctx.beginPath()
 
         //same method used to draw circle as above
+        // if(coord[0]-this.centerX >= 0){
+        // this.ctx.arc(this.centerX, this.centerY, (coord[0] - this.centerX), 0, 2*Math.PI)
+        // } else {
+        // this.ctx.arc(this.centerX, this.centerY, (this.centerX - coord[0]), 0, 2*Math.PI)
+        // }
+
         if(coord[0]-this.centerX >= 0){
-        this.ctx.arc(this.centerX, this.centerY, (coord[0] - this.centerX), 0, 2*Math.PI)
+            //when the mouse is of the right side of the starting point
+            let radius = (coord[0] - this.centerX)
+            //the radius is curr coord - the center
+            this.ctx.arc(this.centerX, this.centerY, radius, 0, 2*Math.PI)
         } else {
-        this.ctx.arc(this.centerX, this.centerY, (this.centerX - coord[0]), 0, 2*Math.PI)
+            //when the mouse is on the left side of the starting point
+            let radius = (this.centerX - coord[0])
+            //the radius is the center - curr coord
+            this.ctx.arc(this.centerX, this.centerY, radius, 0, 2*Math.PI)
         }
 
         // set contextReal fill and stroke

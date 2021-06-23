@@ -1,4 +1,8 @@
-// Colour
+// Clear
+$('#clear-btn').click(()=>{
+    currentFunction = new DrawingArc(ctx,ctxDraft);
+    console.log(`Drawing Arc: ${currentFunction}`)
+});
 
 // Drawing Arc
 $('#arc-btn').click(()=>{
