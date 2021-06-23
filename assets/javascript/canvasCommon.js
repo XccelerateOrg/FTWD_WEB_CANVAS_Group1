@@ -191,3 +191,10 @@ let canvasSettings = {
     console.log($(e.target).val())
     canvasSettings.strokeSize = $(e.target).val()
   })
+
+
+function background(){
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+background();
