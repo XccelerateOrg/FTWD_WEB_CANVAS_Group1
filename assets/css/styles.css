@@ -58,10 +58,12 @@ body{
   /* display: inline-block; */
 }
 
-#export-btn {
-  margin-top: 7.5px;
-  margin-left: 4px;
-  margin-right: 4px;
+#export-btnPNG {
+  padding: 3px;
+
+}
+#export-btnJPG {
+  padding: 3px;
 
 }
 
