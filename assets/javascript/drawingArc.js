@@ -27,10 +27,6 @@ class DrawingArc extends PaintFunction{
         console.log(this.click)
             
 
-        } else if(this.click == 3){
-            this.cpX1 = coord[0];
-            this.cpY1 = coord[1];
-            currentFunction = new DrawingCurve (ctx,ctxDraft)
         }
         
         this.ctx.beginPath();
@@ -53,15 +49,9 @@ class DrawingArc extends PaintFunction{
             this.ctxDraft.beginPath();
             this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
             this.ctxDraft.moveTo(this.origX, this.origY);
-            this.ctxDraft.lineTo(this.endX, this.endY);
+            this.ctxDraft.quadraticCurveTo(coord[0], coord[1], this.endX, this.endY);
             this.ctxDraft.stroke();
         } 
     }
         
     }
-    
-    // this.ctx.beginPath();
-    // this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-    // this.ctx.moveTo(this.origX, this.origY);
-    // this.ctx.bezierCurveTo(this.cpX, this.cpY, this.cpX1, this.cpY1, this.endX, this.endY);
-    // this.ctx.stroke();
