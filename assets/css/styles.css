@@ -28,19 +28,22 @@ body{
   overflow: hidden;
   background: #313131;
 }
+
+
 /* #canvas-container{
     height:720px;
 }  */
 
 .btn-container{
-    position: fixed;
+    position:relative;
     top: 800px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: row;
     margin-top: 15px;
-    width: 100%;
+    width: 100vw;
 }
+
 .btn-container .btn {
   align-self: center;
   width: 100px;
@@ -51,7 +54,7 @@ body{
   background: #222;
   font-weight: bold;
   margin: 0 10px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 
@@ -75,20 +78,30 @@ body{
 justify-content: center;
 }
 
+
 .color-picker-wrapper .colorText{
   color: white;
   font-size: 15px;
   padding-top: 5px;
   margin-left: 5px;
+} 
 
-}
 .pen-range {
   align-self: center;
   margin: 0 10px;
-  width: 150px;
+  width: 200px !important
 }
 
+.side-no{
+  height: 50px;
+  width: 50px !important
+}
 
-.inputRange {
+label{
+  color: white;
+  margin: 5px
+}
+
+/* .inputRange {
   width: 100px;
-}
+} */

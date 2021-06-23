@@ -154,8 +154,14 @@ const pickrStroke = Pickr.create({
   ...pickrConfig
 });
 
+const pickrBackground = Pickr.create({
+  el: '#colorBackground',
+  ...pickrConfig
+});
+
 // canvas setting
 let canvasSettings = {
+  colorBackground: "#FFFFFF",
   colorStroke: "#000000" ,
   colorFill: "#000000",
   strokeSize: 10
@@ -173,6 +179,12 @@ let canvasSettings = {
     console.log('Event: "save"', color, instance);
     console.log(color.toRGBA().toString(3))
     canvasSettings.colorStroke = color.toRGBA().toString(3)
+  })
+
+  pickrBackground.on('save', (color, instance) => {
+    console.log('Event: "save"', color, instance);
+    console.log(color.toRGBA().toString(3))
+    canvasSettings.colorBackground = color.toRGBA().toString(3)
   })
 
   $("#pen-range").on("change",(e)=>{

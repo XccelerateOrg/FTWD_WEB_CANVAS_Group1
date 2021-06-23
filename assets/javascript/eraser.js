@@ -6,7 +6,7 @@ class DrawingEraser extends PaintFunction{
     
     onMouseDown(coord,e){
         //this.ctx.globalCompositeOperation="destination-out";
-        this.ctx.strokeStyle = "white"; 
+        this.ctx.strokeStyle = canvasSettings.colorBackground; 
         // this should not be white
         this.ctx.lineJoin = "round";
         this.ctx.lineCap = "round"; //lineCap = "butt" or "round"

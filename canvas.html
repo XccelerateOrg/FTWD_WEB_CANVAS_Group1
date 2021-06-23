@@ -24,10 +24,10 @@
     <canvas id="canvasDraft" class="canvas"></canvas>
   </div>
   <div class="btn-container">
-   
     <button class="btn" id="arc-btn">Arc</button>
     <button class="btn" id="brush-btn">Brush</button>
     <button class="btn" id="circle-btn">Circle</button>
+    <button class="btn" id="clear-btn">Clear</button>
     <button class="btn" id="curve-btn">Curve</button>
     <button class="btn" id="line-btn">Line</button>
     <button class="btn" id="polygon-btn">Polygon</button>
@@ -43,16 +43,29 @@
     <button class="btn" id="undo-btn">Undo</button>
     <button class="btn" id="redo-btn">Redo</button>
     <button class="btn" id="zoom-btn">Zoom</button>
+  </div>
+  <br>
+
+  <div class="btn-container">
     <div class="color-picker-wrapper">
       <input type="color" class="color-picker" id="colorFill">
-      <p class="colorText">Fill</p>
+      <div><p class="colorText">Fill</p></div>
     </div>
     <div class="color-picker-wrapper">
       <input type="color" class="color-picker" id="colorStroke">
-      <p class="colorText">Stroke</p>
+      <div><p class="colorText">Stroke</p></div>
     </div>
+    <div class="color-picker-wrapper">
+      <input type="color" class="color-picker" id="colorBackground">
+      <div><p class="colorText">Background</p></div>
+    </div>
+  </div>
+
+  <div class="btn-container">
       <input type="range" min="1" max="100" class="pen-range" id="pen-range">
-    
+      <label for="strokeSize">Stroke Size</label>
+      <input type="number" min="3" class="sides-no" id="sides-no">
+      <label for="polygonSides">Polygon Sides</label>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
