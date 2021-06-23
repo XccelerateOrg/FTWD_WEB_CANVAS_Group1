@@ -78,11 +78,18 @@ $('#text-btn').click(()=>{
     console.log(`Text: ${currentFunction}`)
 });
 
-// Undo Redo
+// Undo
 $('#undo-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
-    console.log(`Undo: ${currentFunction}`)
+    undo();
+    console.log(`undo`)
 });
+
+// Redo
+$(`#redo-btn`).click(()=>{
+    redo();
+    console.log(`redo`)
+})
+
 
 // Zoom
 $('#zoom-btn').click(()=>{

@@ -11,10 +11,10 @@ onMouseDown(coord,e){
     // this.ctxDraft.fillStyle = drawColor;
     //set the color of the line
     console.log("here");
-    this.ctx.fillStyle = drawColor;
-    this.ctxDraft.fillStyle = drawColor;
-    this.ctx.fillStyle = "#00ff00";
-    this.ctx.fillStyle = "#00ff00";
+    this.ctx.fillStyle = canvasSettings.colorFill;
+    this.ctxDraft.fillStyle = canvasSettings.colorFill;
+    // this.ctx.fillStyle = "#00ff00";
+    // this.ctx.fillStyle = "#00ff00";
     this.origX = coord[0];
     this.origY = coord[1];
     //get the starting position of the rect
@@ -39,13 +39,15 @@ onMouseMove(){}
 
 onMouseUp(coord){
     //when user mouse up, register the rect to thectx real
-    this.ctx.fillStyle = drawColor
+    this.ctx.fillStyle = canvasSettings.colorFill;
     //set the color for the ctx real
 
     this.ctxDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     //clear the rect from the draft
 
     this.ctx.fillRect(this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY)
+    restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height))
+    index += 1;
 }
 onMouseLeave(){}
 onMouseEnter(){}
