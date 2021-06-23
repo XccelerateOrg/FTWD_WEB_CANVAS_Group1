@@ -35,9 +35,10 @@ In the javascript folder, there are various functionalities for the canvas appli
 | I | Ads (freemium, premium)  
 | B | Canvas Common (DONE)  
 | B | Clear
-| Z | Colour  
+| B | Crop
+| Z | Colour (DONE)
 | I | Drawing Arc (add moving point, change colorStroke)
-| B | Drawing Brush (make it smoother)
+| B | Drawing Brush (DONE)
 | Z | Drawing Circle (change colorFill, colorStroke)
 | I | Drawing Curve
 | B | Drawing Line (DONE)  
@@ -48,7 +49,7 @@ In the javascript folder, there are various functionalities for the canvas appli
 | I | Fill  
 | B | Filter  
 | Z | Mouse  
-| I | Select / Drag / Resize / Crop  
+| I | Select / Drag / Resize
 | B | Text
 | Z | Toolbar  
 | I | Undo / Redo  
