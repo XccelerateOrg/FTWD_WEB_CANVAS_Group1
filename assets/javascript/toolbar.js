@@ -1,3 +1,9 @@
+// Upload
+$('#upload-btn').click(()=>{
+    uploadImage();
+    console.log(`Upload Image`)
+})
+
 // Clear
 $('#clear-btn').click(()=>{
     clear();
@@ -10,9 +16,29 @@ $('#arc-btn').click(()=>{
     console.log(`Drawing Arc: ${currentFunction}`)
 });
 
-// Drawing Brush
-$('#brush-btn').click(()=>{
-    currentFunction = new DrawingBrush(ctx,ctxDraft);
+// Drawing smoothBrush
+$('#smoothBrush').click(()=>{
+    currentFunction = new smoothBrush(ctx,ctxDraft);
+    console.log(`Drawing Brush: ${currentFunction}`)
+});
+
+$('#shadowBrush').click(()=>{
+    currentFunction = new shadowBrush(ctx,ctxDraft);
+    console.log(`Drawing Brush: ${currentFunction}`)
+});
+
+$('#radialBrush').click(()=>{
+    currentFunction = new smoothBrush(ctx,ctxDraft);
+    console.log(`Drawing Brush: ${currentFunction}`)
+});
+
+$('#penBrush').click(()=>{
+    currentFunction = new smoothBrush(ctx,ctxDraft);
+    console.log(`Drawing Brush: ${currentFunction}`)
+});
+
+$('#multipleLineBrush').click(()=>{
+    currentFunction = new smoothBrush(ctx,ctxDraft);
     console.log(`Drawing Brush: ${currentFunction}`)
 });
 
@@ -73,7 +99,7 @@ $('#filter-btn').click(()=>{
 
 // Select
 $('#select-btn').click(()=>{
-    currentFunction = new Select (ctx,ctxDraft);
+    select()
     console.log(`Select: ${currentFunction}`)
 });
 
@@ -116,4 +142,4 @@ $('#zoom-btn').click(()=>{
     console.log(`Zoom: ${currentFunction}`)
 });
 
-currentFunction = new DrawingRectangle (ctx,ctxDraft)
+// currentFunction = new DrawingRectangle (ctx,ctxDraft)

@@ -57,7 +57,7 @@ $(`#canvasDraft`).mousemove(function(e){
     if(dragging){
         currentFunction.onDragging([mouseX,mouseY],e);
     }
-    currentFunction.onMouseMove([mouseX,mouseY],e);
+    // currentFunction.onMouseMove([mouseX,mouseY],e);
 });
 //when the cursor moves, keep recording the X,Y of the cursor,
 //if the dragging is on (w/ combination of mousedown)

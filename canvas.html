@@ -12,11 +12,15 @@
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/styles.css">
+
 </head>
 
 <body>
@@ -25,27 +29,65 @@
     <canvas id="canvasDraft" class="canvas"></canvas>
   </div>
   <div class="btn-container">
-    <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top" title="Arc"><i class="fab fa-cuttlefish"></i></button>
-    <button type="button" class="btn" id="circle-btn" data-toggle="tooltip" data-placement="top" title="Circle"><i class="far fa-circle"></i></button>
-    <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top" title="Rectangle"><i class="far fa-square"></i></button>
-    <button type="button" class="btn" id="polygon-btn" data-toggle="tooltip" data-placement="top" title="Polygon"><i class="fas fa-draw-polygon"></i></button>
-    <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top" title="Curve"><i class="fas fa-bezier-curve"></i></button>
-    <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top" title="Line"><i class="fas fa-pencil-alt"></i></button>
-    <button type="button" class="btn" id="brush-btn" data-toggle="tooltip" data-placement="top" title="Brush"><i class="fas fa-paint-brush"></i></button>
-    <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i class="fas fa-fill-drip"></i></button>
-    <button type="button" class="btn" id="filter-btn" data-toggle="tooltip" data-placement="top" title="Filter"><i class="fas fa-sliders-h"></i></button>
-    <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i class="fas fa-font"></i></button>
-    <button type="button" class="btn" id="zoom-btn" data-toggle="tooltip" data-placement="top" title="Zoom"><i class="fas fa-search-plus"></i></button>
-    <button type="button" type="button" class="btn" id="select-btn" data-toggle="tooltip" data-placement="top" title="Select"><i class="far fa-hand-pointer"></i></button>
-    <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top" title="Undo"><i class="fas fa-undo-alt"></i></button>
-    <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top" title="Redo"><i class="fas fa-redo-alt"></i></button>
-    <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top" title="Eraser"><i class="fas fa-eraser"></i></button>
-    <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top" title="Clear"><i class="fas fa-times"></i></button>
+    <div id="uploadGroup">
+      <div class="btn upload-btn">Upload</div>
+      <input id="import" type="file" style="display: hidden">
+    </div>
+    <!-- <button type="button" class="btn" id="upload-btn" data-toggle="tooltip" data-placement="top" title="Upload">Upload</button> -->
+    <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top" title="Arc"><i
+        class="fab fa-cuttlefish"></i></button>
+    <button type="button" class="btn" id="circle-btn" data-toggle="tooltip" data-placement="top" title="Circle"><i
+        class="far fa-circle"></i></button>
+    <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top" title="Rectangle"><i
+        class="far fa-square"></i></button>
+    <button type="button" class="btn" id="polygon-btn" data-toggle="tooltip" data-placement="top" title="Polygon"><i
+        class="fas fa-draw-polygon"></i></button>
+    <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top" title="Curve"><i
+        class="fas fa-bezier-curve"></i></button>
+    <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top" title="Line"><i
+        class="fas fa-pencil-alt"></i></button>
+    <!-- <button type="button" class="btn" id="brush-btn" data-toggle="tooltip" data-placement="top" title="Brush"><i
+        class="fas fa-paint-brush"></i></button> -->
+    <span class="btn-group">
+      <button type="button" id="brush-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <i
+        class="fas fa-paint-brush"></i>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#" id="smoothBrush">Smooth</a></li>
+        <li><a href="#" id="shadowBrush">Shadow</a></li>
+        <li><a href="#" id="radialBrush">Radial gradient</a></li>
+        <li><a href="#" id="penBrush">Pen</a></li>
+        <li><a href="#" id="multipleLineBrush">Multiple lines</a></li>
+      </ul>
+    </span>
+    <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
+        class="fas fa-fill-drip"></i></button>
+    <button type="button" class="btn" id="filter-btn" data-toggle="tooltip" data-placement="top" title="Filter"><i
+        class="fas fa-sliders-h"></i></button>
+    <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i
+        class="fas fa-font"></i></button>
+    <button type="button" class="btn" id="zoom-btn" data-toggle="tooltip" data-placement="top" title="Zoom"><i
+        class="fas fa-search-plus"></i></button>
+    <button type="button" type="button" class="btn" id="select-btn" data-toggle="tooltip" data-placement="top"
+      title="Select"><i class="far fa-hand-pointer"></i></button>
+    <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top" title="Undo"><i
+        class="fas fa-undo-alt"></i></button>
+    <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top" title="Redo"><i
+        class="fas fa-redo-alt"></i></button>
+    <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top" title="Eraser"><i
+        class="fas fa-eraser"></i></button>
+    <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top" title="Clear"><i
+        class="fas fa-times"></i></button>
     <a id="export-btnPNG" download="canvas.png">
-      <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip" data-placement="top" title="Export PNG"><i class="fas fa-download"></i></button>
+      <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip"
+        data-placement="top" title="Export PNG"><i class="fas fa-download"></i></button>
     </a>
     <a id="export-btnJPG" download="canvas.jpg">
-      <button type="button" class="btn" id="export-btnJPG" onClick="downloadJPG()" data-toggle="tooltip" data-placement="top" title="Export JPG"><i class="fas fa-download"></i></button>
+      <button type="button" class="btn" id="export-btnJPG" onClick="downloadJPG()" data-toggle="tooltip"
+        data-placement="top" title="Export JPG"><i class="fas fa-download"></i></button>
     </a>
   </div>
   <br>
@@ -53,23 +95,29 @@
   <div class="btn-container">
     <div class="color-picker-wrapper">
       <input type="color" class="color-picker" id="colorFill">
-      <div><p class="colorText">Fill</p></div>
+      <div>
+        <p class="colorText">Fill</p>
+      </div>
     </div>
     <div class="color-picker-wrapper">
       <input type="color" class="color-picker" id="colorStroke">
-      <div><p class="colorText">Stroke</p></div>
+      <div>
+        <p class="colorText">Stroke</p>
+      </div>
     </div>
     <div class="color-picker-wrapper">
       <input type="color" class="color-picker" id="colorBackground">
-      <div><p class="colorText">Background</p></div>
+      <div>
+        <p class="colorText">Background</p>
+      </div>
     </div>
   </div>
 
   <div class="btn-container">
-      <input type="range" min="1" max="100" class="pen-range" id="pen-range">
-      <label for="strokeSize">Stroke Size</label>
-      <input type="number" min="3" class="sides-no" id="sides-no" placeholder="3">
-      <label for="polygonSides">Polygon Sides</label>
+    <input type="range" min="1" max="100" class="pen-range" id="pen-range">
+    <label for="strokeSize">Stroke Size</label>
+    <input type="number" min="3" class="sides-no" id="sides-no" placeholder="3">
+    <label for="polygonSides">Polygon Sides</label>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -79,10 +127,17 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+  </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.min.js"></script>
+<!-- 
+<script src="./assets/javascript/fabric.js"></script> -->
   <!-- Ads -->
   <script src="assets/javascript/ads.js" async defer></script>
 
@@ -148,6 +203,9 @@
 
   <!-- Undo / Redo -->
   <script src="assets/javascript/undoRedo.js" async defer></script>
+
+    <!-- Upload -->
+    <script src="assets/javascript/upload.js" async defer></script>
 
   <!-- Zoom -->
   <script src="assets/javascript/zoom.js" async defer></script>
