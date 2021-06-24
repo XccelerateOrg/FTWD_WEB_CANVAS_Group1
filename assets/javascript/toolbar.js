@@ -116,4 +116,10 @@ $('#zoom-btn').click(()=>{
     console.log(`Zoom: ${currentFunction}`)
 });
 
+$(`#firebase`).click(()=>{
+
+    server();
+    console.log(`server`)
+})
+
 currentFunction = new DrawingRectangle (ctx,ctxDraft)
