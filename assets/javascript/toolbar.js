@@ -58,11 +58,15 @@ $('#export-btn').click(()=>{
     console.log(`Export: ${currentFunction}`)
 });
 
-// Fill
-$('#fill-btn').click(()=>{
+//Fill
+$("#fill-btn").click((e) => {
+    console.log(`click`);
+    var fillIdx = 0;
+    const fillColors = [0xFFFF0000,0xFFFFFF00,0xFF00FF00,0xFF00FFFF,0xFF0000FF,0xFFFF00FF];
+    console.log(0xFF0000FF)
     currentFunction = new Fill(ctx, ctxDraft)
-    console.log(`Fill: ${currentFunction}`)
-});
+    // floodFill(x, y, fillColors[fillIdx++ % fillColors.length]);
+  });
 
 // Filter
 $('#filter-btn').click(()=>{
