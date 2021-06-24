@@ -41,6 +41,7 @@
     <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top" title="Redo"><i class="fas fa-redo-alt"></i></button>
     <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top" title="Eraser"><i class="fas fa-eraser"></i></button>
     <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top" title="Clear"><i class="fas fa-times"></i></button>
+    <button type="button" class="btn" id="firebase" data-toggle="tooltip" data-placement="top" title="Firebase" >FireBase</button>
     <a id="export-btnPNG" download="canvas.png">
       <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip" data-placement="top" title="Export PNG"><i class="fas fa-download"></i></button>
     </a>
@@ -131,27 +132,41 @@
   <!-- Filter -->
   <script src="assets/javascript/filter.js" async defer></script>
 
+  
   <!-- Mouse Methods -->
   <script src="assets/javascript/mouseMethods.js" async defer></script>
-
+  
   <!-- Select -->
   <script src="assets/javascript/select.js" async defer></script>
-
+  
   <!-- Text -->
   <script async defer src="assets/javascript/text.js"></script>
-
+  
   <!-- Toolbar -->
   <script src="assets/javascript/toolbar.js" async defer></script>
-
+  
   <!--Tooltip-->
   <script src="assets/javascript/tooltip.js" async defer></script>
-
+  
   <!-- Undo / Redo -->
   <script src="assets/javascript/undoRedo.js" async defer></script>
-
+  
   <!-- Zoom -->
   <script src="assets/javascript/zoom.js" async defer></script>
+  
+   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
-</body>
-
-</html>
+   <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+   
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+   
+   <!-- Add Firebase products that you want to use -->
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <!-- FireBase -->
+    <script src="assets/javascript/firebase.js" async defer></script>
+  </body>
+  
+  </html>
