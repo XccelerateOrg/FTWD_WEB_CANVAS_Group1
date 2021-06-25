@@ -49,14 +49,14 @@ var storage = firebase.storage();
 
 function server() {
     let blob;
-    canvas.toBlob(function(blob){
+    canvas.toBlob(function (blob) {
         var image = new Image();
         image.src = blob;
-        var uploadTask = storageRef.child('images/' + "canvas.png").put(blob);
-      }); 
+        var uploadTask = storageRef.child('images/' + "canvas" + new Date().getTime() + '.png').put(blob);
+    });
     // let url;
     // canvas.toBlob(function(blob) {
-        //     var newImg = document.createElement('img'),
+    //     var newImg = document.createElement('img'),
     //          url = URL.createObjectURL(blob);
 
     //     newImg.onload = function() {
@@ -68,10 +68,11 @@ function server() {
     // document.body.appendChild(newImg);
 
     var storageRef = firebase.storage().ref();
-    var canvasRef = storageRef.child(`canvas.png`);
+    // var canvasRef = storageRef.child(`canvas.png`);
     // var uploadTask = storageRef.child(`images/canvas.png`).put(blob);
     // var uploadTask = storageRef.child('images/canvas.jpg').put(blob);
-    uploadTask.on('state_changed', function (snapshot) {
+    
+    uploadTask.on('state_changed',  (snapshot) => {
         // Observe state change events such as progress, pause, and resume
         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log('Upload is ' + progress + '% done');
@@ -83,10 +84,10 @@ function server() {
                 console.log('Upload is running');
                 break;
         }
-    }, function (error) {
+    },  (error) => {
         // Handle unsuccessful uploads
         console.log("error");
-    }, function () {
+    },  () => {
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         var downloadURL = uploadTask.snapshot.downloadURL;
