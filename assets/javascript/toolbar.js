@@ -72,6 +72,12 @@ $('#rectangle-btn').click(()=>{
     console.log(`Drawing Rectangle: ${currentFunction}`)
 });
 
+// Dragger
+$('#drag-btn').click(()=>{
+    MouseTouchTracker()
+    console.log(`Drawing Rectangle: ${currentFunction}`)
+});
+
 // Eraser
 $('#eraser-btn').click(()=>{
     currentFunction = new DrawingEraser(ctx);
@@ -103,7 +109,13 @@ $('#filter-btn').click(()=>{
 
 // Select
 $('#select-btn').click(()=>{
-    select()
+    currentFunction = new Select(ctx,ctxDraft);
+    console.log(`Select: ${currentFunction}`)
+});
+
+//crop
+$('#select-btn').click(()=>{
+    currentFunction = new Select(ctx,ctxDraft);
     console.log(`Select: ${currentFunction}`)
 });
 

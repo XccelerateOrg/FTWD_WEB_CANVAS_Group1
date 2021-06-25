@@ -56,7 +56,7 @@ onMouseUp(coord){
     this.ctx.strokeRect(this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY)
 
     restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
-    index += 1;
+    index += 1; 
 }
 onMouseLeave(){}
 onMouseEnter(){}

@@ -70,7 +70,7 @@ class shadowBrush extends PaintFunction {
 }
 
 
-Resources
+// Resources
 // Radial gradient
 
 // Pen Brush

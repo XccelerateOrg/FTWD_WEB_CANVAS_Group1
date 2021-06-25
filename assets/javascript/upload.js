@@ -56,4 +56,4 @@ function uploadImage(){
     //     canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount].src = canvasReal.toDataURL();
     //     canvasSettings.undoObject.actionCount++;
     // }
-}
+// }
