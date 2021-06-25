@@ -24,13 +24,13 @@ let fontFam = "Georgia, serif";
 let fontSize = "90px";
 
 function resizeCanvas() {
-  canvas.width = 1800;
-  canvas.height = 800;
+  canvas.width = 800;
+  canvas.height = 500;
 }
 //canvas can only be resized through js or (inline??), css effect the coord system
 function resizeCanvasDraft() {
-  canvasDraft.width = 1800;
-  canvasDraft.height = 800;
+  canvasDraft.width = 800;
+  canvasDraft.height = 500;
 }
 
 resizeCanvas();
