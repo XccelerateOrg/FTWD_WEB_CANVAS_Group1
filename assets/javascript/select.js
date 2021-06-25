@@ -1,11 +1,10 @@
-// const canvas = new Canvas('canvas', 500, 500);
+// const canvas = new Canvas('my-canvas', 500, 500);
 
-// let image = new Image();
-// image.src = 'https://dummyimage.com/100x100/000/fff';
+// let image = new restoreArray[0]
 
 // let moveImage = false;
 
-// image.onload = function () {
+// image.onload = function select() {
 
 //   image = {
 //     image: image,
