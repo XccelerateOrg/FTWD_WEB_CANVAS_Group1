@@ -121,14 +121,15 @@ $('#select-btn').click(()=>{
 
 // Text
 $('#text-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new (ctx, ctxDraft);
     console.log(`Text: ${currentFunction}`)
 });
 
 // Undo
 $('#undo-btn').click(()=>{
     undo();
-    console.log(`undo`)
+    console.log(`undo`, index)
+    console.log(`redo`, reIndex)
 });
 
 function KeyPress(e) {
@@ -149,7 +150,8 @@ document.onkeydown = KeyPress;
 // Redo
 $(`#redo-btn`).click(()=>{
     redo();
-    console.log(`redo`)
+    console.log(`undo`, index)
+    console.log(`redo`, reIndex)
 })
 
 // Zoom

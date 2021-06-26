@@ -206,4 +206,3 @@ $("#sides-no").on("change", (e) => {
   console.log($(e.target).val());
   canvasSettings.strokeSize = $(e.target).val();
 });
-
