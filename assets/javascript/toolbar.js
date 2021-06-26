@@ -164,5 +164,25 @@ $(`#firebase`).click(()=>{
     server();
     console.log(`server`)
 })
+$(`#heart-btn`).click(()=>{
+
+    currentFunction = new StampHeart(ctx)
+    console.log('stamp')
+})
+$(`#troll-btn`).click(()=>{
+
+    currentFunction = new StampTroll(ctx)
+    console.log('stamp')
+})
+$(`#star-btn`).click(()=>{
+
+    currentFunction = new StampStar(ctx)
+    console.log('stamp')
+})
+$(`#emoji-btn`).click(()=>{
+
+    currentFunction = new StampEmoji(ctx)
+    console.log('stamp')
+})
 
 currentFunction = new DrawingRectangle (ctx,ctxDraft)
