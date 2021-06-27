@@ -26,7 +26,6 @@ class DrawingLine extends PaintFunction {
     
     
     this.ctxDraft.stroke();
-    this.ctx.stroke();
   }  
   
   

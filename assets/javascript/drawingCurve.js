@@ -14,6 +14,15 @@
         
         onMouseDown(coord, e){
             
+            this.ctx.fillStyle = canvasSettings.colorFill;
+            this.ctxDraft.fillStyle = canvasSettings.colorFill;
+        
+            this.ctx.strokeStyle = canvasSettings.colorStroke;
+            this.ctxDraft.strokeStyle = canvasSettings.colorStroke;
+        
+            this.ctxDraft.lineWidth = canvasSettings.strokeSize;
+            this.ctx.lineWidth = canvasSettings.strokeSize
+
             if(this.click == 0){
                 this.origX = coord[0];
                 this.origY = coord[1];

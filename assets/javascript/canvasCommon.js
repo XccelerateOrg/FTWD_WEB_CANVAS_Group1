@@ -24,12 +24,12 @@ let fontFam = "Georgia, serif";
 let fontSize = "90px";
 
 function resizeCanvas() {
-  canvas.width = 1800;
+  canvas.width = window.innerWidth;
   canvas.height = 800;
 }
 //canvas can only be resized through js or (inline??), css effect the coord system
 function resizeCanvasDraft() {
-  canvasDraft.width = 1800;
+  canvasDraft.width = window.innerWidth;
   canvasDraft.height = 800;
 }
 
@@ -173,8 +173,6 @@ pickrFill.on("save", (color, instance) => {
   canvasSettings.colorFill = color.toRGBA().toString(3);
   canvasSettings.colorFillArray = color.toRGBA();
   canvasSettings.colorHex = color.toHEXA();
-  console.log(canvasSettings.colorHex)
-  console.log(canvasSettings.colorFillArray);
   function colorToHex(){
     canvasSettings.colorHex1 = `0xFF` + canvasSettings.colorHex[2] + canvasSettings.colorHex[1] + canvasSettings.colorHex[0]
   }
@@ -204,5 +202,5 @@ $("#pen-range").on("change", (e) => {
 
 $("#sides-no").on("change", (e) => {
   console.log($(e.target).val());
-  canvasSettings.strokeSize = $(e.target).val();
+  canvasSettings.polygonSides = $(e.target).val();
 });
