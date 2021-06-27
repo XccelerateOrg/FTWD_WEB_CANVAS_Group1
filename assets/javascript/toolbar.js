@@ -148,7 +148,6 @@ $('#zoom-btn').click(()=>{
 
 
 $(`#firebase`).click(()=>{
-
     server();
     console.log(`server`)
 })

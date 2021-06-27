@@ -65,8 +65,28 @@
     </span>
     <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
         class="fas fa-fill-drip"></i></button>
-    <button type="button" class="btn" id="filter-btn" data-toggle="tooltip" data-placement="top" title="Filter"><i
-        class="fas fa-sliders-h"></i></button>
+    <!-- <button type="button" class="btn" id="filter-btn" data-toggle="tooltip" data-placement="top" title="Filter"><i
+        class="fas fa-sliders-h"></i></button> -->
+        <span class="btn-group">
+          <button type="button" id="brush-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i
+            class="fas fa-paint-brush"></i>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="brightnessFilter">Brightness</a></li>
+            <li><a href="#" id="contrastFilter">Contrast</a></li>
+            <li><a href="#" id="contrastFilter">Blur</a></li>
+            <li><a href="#" id="dropShadowFilter">Radial gradient</a></li>
+            <li><a href="#" id="grayscaleFilter">Grayscale</a></li>
+            <li><a href="#" id="hueFilter">Hue Rotate</a></li>
+            <li><a href="#" id="contrastFilter">Opacity</a></li>
+            <li><a href="#" id="dropShadowFilter"></a></li>
+            <li><a href="#" id="grayscaleFilter">Grayscale</a></li>
+            <li><a href="#" id="hueFilter">Hue Rotate</a></li>
+          </ul>
+        </span>
     <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i
         class="fas fa-font"></i></button>
     <button type="button" class="btn" id="zoom-btn" data-toggle="tooltip" data-placement="top" title="Zoom"><i
