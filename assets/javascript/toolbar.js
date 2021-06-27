@@ -72,6 +72,12 @@ $('#rectangle-btn').click(()=>{
     console.log(`Drawing Rectangle: ${currentFunction}`)
 });
 
+// Dragger
+$('#drag-btn').click(()=>{
+    MouseTouchTracker()
+    console.log(`Drawing Rectangle: ${currentFunction}`)
+});
+
 // Eraser
 $('#eraser-btn').click(()=>{
     currentFunction = new DrawingEraser(ctx);
@@ -86,12 +92,7 @@ $('#export-btn').click(()=>{
 
 //Fill
 $("#fill-btn").click((e) => {
-    console.log(`click`);
-    var fillIdx = 0;
-    const fillColors = [0xFFFF0000,0xFFFFFF00,0xFF00FF00,0xFF00FFFF,0xFF0000FF,0xFFFF00FF];
-    console.log(0xFF0000FF)
     currentFunction = new Fill(ctx, ctxDraft)
-    // floodFill(x, y, fillColors[fillIdx++ % fillColors.length]);
   });
 
 // Filter
@@ -103,20 +104,25 @@ $('#filter-btn').click(()=>{
 
 // Select
 $('#select-btn').click(()=>{
-    select()
+    currentFunction = new Select(ctx,ctxDraft);
+    console.log(`Select: ${currentFunction}`)
+});
+
+//crop
+$('#select-btn').click(()=>{
+    currentFunction = new Select(ctx,ctxDraft);
     console.log(`Select: ${currentFunction}`)
 });
 
 // Text
 $('#text-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+    currentFunction = new (ctx, ctxDraft);
     console.log(`Text: ${currentFunction}`)
 });
 
 // Undo
 $('#undo-btn').click(()=>{
     undo();
-    console.log(`undo`)
 });
 
 function KeyPress(e) {
@@ -137,7 +143,6 @@ document.onkeydown = KeyPress;
 // Redo
 $(`#redo-btn`).click(()=>{
     redo();
-    console.log(`redo`)
 })
 
 // Zoom
@@ -150,6 +155,26 @@ $('#zoom-btn').click(()=>{
 $(`#firebase`).click(()=>{
     server();
     console.log(`server`)
+})
+$(`#heart-btn`).click(()=>{
+
+    currentFunction = new StampHeart(ctx)
+    console.log('stamp')
+})
+$(`#troll-btn`).click(()=>{
+
+    currentFunction = new StampTroll(ctx)
+    console.log('stamp')
+})
+$(`#star-btn`).click(()=>{
+
+    currentFunction = new StampStar(ctx)
+    console.log('stamp')
+})
+$(`#emoji-btn`).click(()=>{
+
+    currentFunction = new StampEmoji(ctx)
+    console.log('stamp')
 })
 
 currentFunction = new DrawingRectangle (ctx,ctxDraft)

@@ -6,8 +6,8 @@ body{
     background-color: #FFF;
     border:1px black dotted;
     position:absolute;
-    top:0px;
-    bottom:0px;
+    top: 0px;
+    bottom: 0px;
     left:0px;
     right:0px
 }
@@ -72,14 +72,16 @@ body{
   /* display: inline-block; */
 }
 
+#function-bar{
+  padding-right: 60px;
+}
 
 #export-btnPNG {
   padding: 3px;
-
 }
+
 #export-btnJPG {
   padding: 3px;
-
 }
 
 
@@ -130,3 +132,7 @@ label{
 /* .inputRange {
   width: 100px;
 } */
+
+#uploadGroup{
+  width: 120px;
+}
