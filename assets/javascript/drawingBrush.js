@@ -38,13 +38,14 @@ class shadowBrush extends PaintFunction {
         super();
         this.ctx = ctx;
     }
-    onmousedown = function (coord) {
+    onMouseDown = function (coord) {
         // // isDrawing = true;
         // this.ctx.strokeStyle = canvasSettings.colorStroke;
         // // this.ctx.lineCap = "round";
         // this.ctx.lineWidth = canvasSettings.strokeSize;
         // // this.ctx.lineWidth = 10;
         // this.ctx.lineJoin = this.ctx.lineCap = 'round';
+        
         this.ctx.strokeStyle = canvasSettings.colorStroke;
         this.ctx.lineCap = "round";
         this.ctx.lineWidth = canvasSettings.strokeSize;
@@ -70,7 +71,7 @@ class shadowBrush extends PaintFunction {
 }
 
 
-Resources
+// Resources
 // Radial gradient
 
 // Pen Brush
