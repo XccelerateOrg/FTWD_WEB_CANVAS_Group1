@@ -22,9 +22,12 @@
 </head>
 
 <body>
-  <div class="row header">
+  <div class="row header" id="header">
     <div class="col-sm-12">
-      <H1> Header</H1>
+      <img id="logo" src="./assets/images/pictionblurLogo.png">
+      <button type="button" class="btn" id="playGame" data-toggle="tooltip" data-placement="top"
+      title="Start">Play a game!</button>
+    </div>
     </div>
   </div>
 
@@ -32,30 +35,30 @@
 
     <div class="col-sm-2">
       <div class="left-toolbar">
-        <div class="panel panel-primary">
+        <div class="panel panel-info">
           <div class="panel-heading">Tools</div>
           <div class="panel-body">
             <div class="btn-icon-container" id="function-bar">
               <button type="button" class="btn" id="upload-btn" data-toggle="tooltip" data-placement="top"
                 title="Upload Image">
-                <i class="fas fa-xs fa-upload"></i>
+                <i class="fas fa-fw fa-upload"></i>
               </button>
               <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top" title="Arc"><i
-                  class="fab fa-cuttlefish"></i></button>
+                  class="fab fa-fw fa-cuttlefish"></i></button>
               <button type="button" class="btn" id="circle-btn" data-toggle="tooltip" data-placement="top"
-                title="Circle"><i class="far fa-circle"></i></button>
+                title="Circle"><i class="far fa-fw fa-circle"></i></button>
               <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top"
-                title="Rectangle"><i class="far fa-square"></i></button>
+                title="Rectangle"><i class="far fa-fw fa-square"></i></button>
               <button type="button" class="btn" id="polygon-btn" data-toggle="tooltip" data-placement="top"
-                title="Polygon"><i class="fas fa-xs fa-draw-polygon"></i></button>
+                title="Polygon"><i class="fas fa-fw fa-draw-polygon"></i></button>
               <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top"
-                title="Curve"><i class="fas fa-xs fa-bezier-curve"></i></button>
+                title="Curve"><i class="fas fa-fw fa-bezier-curve"></i></button>
               <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top" title="Line"><i
-                  class="fas fa-xs fa-pencil-alt"></i></button>
+                  class="fas fa-fw fa-pencil-alt"></i></button>
               <span class="btn-group">
-                <button type="button" id="brush-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" title="Brush">
-                  <i class="fas fa-xs fa-paint-brush"></i>
+                  <i class="fas fa-fw fa-paint-brush"></i>
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -68,9 +71,9 @@
               </span>
 
               <span class="btn-group">
-                <button type="button" id="brush-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" title="Stamp">
-                  <i class="far fa-smile-beam"></i>
+                  <i class="far fa-fw fa-smile-beam"></i>
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -81,13 +84,13 @@
                 </ul>
               </span>
               <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i
-                  class="fas fa-xs fa-font"></i></button>
+                  class="fas fa-fw fa-font"></i></button>
               <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
-                  class="fas fa-xs fa-fill-drip"></i></button>
+                  class="fas fa-fw fa-fill-drip"></i></button>
               <span class="btn-group">
-                <button type="button" id="brush-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" title="Filter">
-                  <i class="fas fa-xs fa-filter"></i>
+                  <i class="fas fa-fw fa-filter"></i>
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -105,29 +108,29 @@
                 </ul>
               </span>
               <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top" title="Undo"><i
-                  class="fas fa-xs fa-undo-alt "></i></button>
+                  class="fas fa-fw fa-undo-alt "></i></button>
               <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top" title="Redo"><i
-                  class="fas fa-xs fa-redo-alt"></i></button>
+                  class="fas fa-fw fa-redo-alt"></i></button>
               <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top"
-                title="Eraser"><i class="fas fa-xs fa-eraser"></i></button>
+                title="Eraser"><i class="fas fa-fw fa-eraser"></i></button>
               <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top"
-                title="Clear"><i class="fas fa-xs fa-times"></i></button>
+                title="Clear"><i class="fas fa-fw fa-times"></i></button>
               <button type="button" class="btn" id="firebase" data-toggle="tooltip" data-placement="top"
-                title="Firebase"><i class="fas fa-xs fa-fire"></i></button>
+                title="Firebase"><i class="fas fa-fw fa-fire"></i></button>
 
               <!-- <a id="export-btnPNG" download="canvas.png">
       <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip"
-        data-placement="top" title="Export PNG"><i class="fas fa-xs fa-download"></i></button>
+        data-placement="top" title="Export PNG"><i class="fas fa-fw fa-download"></i></button>
     </a>
     <a id="export-btnJPG" download="canvas.jpg">
       <button type="button" class="btn" id="export-btnJPG" onClick="downloadJPG()" data-toggle="tooltip"
-        data-placement="top" title="Export JPG"><i class="fas fa-xs fa-download"></i></button>
+        data-placement="top" title="Export JPG"><i class="fas fa-fw fa-download"></i></button>
     </a> -->
 
               <span class="btn-group">
                 <button type="button" id="export-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" title="Export">
-                  <i class="fas fa-xs fa-download"></i>
+                  <i class="fas fa-fw fa-download"></i>
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -141,7 +144,6 @@
       </div>
     </div>
 
-
     <div class="col-sm-8" id="canvas-column">
       <div id="canvas-container" class='canvas-container'>
         <canvas id="canvas" class="canvas"></canvas>
@@ -153,7 +155,7 @@
     <div class="col-sm-2">
       <div class="right-toolbar">
 
-        <div class="colour-pickers panel panel-primary">
+        <div class="colour-pickers panel panel-success">
           <div class="panel-heading"> Colour </div>
           <div class="panel-body">
             <div class="color-picker-wrapper">
@@ -187,12 +189,22 @@
             </div>
 
             <div class="tool-control">
-              <label for="text-font">Font</label>
+              <label for="text-font">Font Family</label>
               <select class="form-control" id="text-font" name="text-font" onchange="canvasSettings.changeText()">
                 <option> Arial </option>
                 <option> Metrophobic </option>
                 <option> Tahoma </option>
                 <option> Verdana </option>
+              </select>
+            </div>
+
+
+            <div class="tool-control">
+              <label for="font-style">Font Style</label>
+              <select class="form-control" id="font-style" name="font-style" onchange="canvasSettings.changeText()">
+                <option> Normal </option>
+                <option> Italic </option>
+                <option> Oblique </option>
               </select>
             </div>
 
@@ -214,7 +226,7 @@
         </div>
 
 
-        <div class="panel panel-warning">
+        <div class="panel panel-danger">
           <div class="panel-heading">Others</div>
           <div class="panel-body">
             <div class="tool-control">
@@ -229,17 +241,6 @@
           </div>
         </div>
 
-
-        <div class="panel panel-warning">
-          <div class="panel-heading">Have fun</div>
-          <div class="panel-body">
-            <div class="tool-control">
-              <button type="button" class="btn" id="playGame" data-toggle="tooltip" data-placement="top"
-                title="Fill">Play
-                a Game!</button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -271,9 +272,6 @@
 
   <!-- Canvas Common -->
   <script src="assets/javascript/canvasCommon.js" async defer></script>
-
-  <!-- Colour -->
-  <script src="assets/javascript/colour.js" async defer></script>
 
   <!-- Clear -->
   <script src="assets/javascript/clear.js"></script>
@@ -311,15 +309,12 @@
   <!-- Filter -->
   <script src="assets/javascript/filter.js" async defer></script>
 
-  <!-- Mouse Methods -->
-  <script src="assets/javascript/mouseMethods.js" async defer></script>
-
   <!-- Game -->
   <script src="assets/javascript/Game/countdown.js" async defer></script>
   <script src="assets/javascript/Game/charade.js" async defer></script>
 
   <!-- Select -->
-  <script src="assets/javascript/select.js" async defer></script>
+  <!-- <script src="assets/javascript/select.js" async defer></script> -->
 
   <!-- Stamp Emoji -->
   <script src="assets/javascript/stamp.js" async defer></script>

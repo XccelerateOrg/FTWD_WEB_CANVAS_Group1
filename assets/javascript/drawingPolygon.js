@@ -13,6 +13,9 @@ class DrawingPolygon extends PaintFunction {
 
     this.ctx.lineCap = this.ctx.lineJoin = "round";
     this.ctxDraft.lineCap = this.ctxDraft.lineJoin = "round";
+    
+    this.ctx.shadowBlur = 0;
+    this.ctxDraft.shadowBlur = 0;
 
     this.ctx.strokeStyle = canvasSettings.colorStroke;
     this.ctxDraft.strokeStyle = canvasSettings.colorStroke;
