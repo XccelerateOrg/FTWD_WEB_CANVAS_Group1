@@ -6,8 +6,8 @@ function handleImage(e){
   reader.onload = function(event){
       var uploadimg = new Image();
       uploadimg.onload = function(){
-          canvas.width = uploadimg.width;
-          canvas.height = uploadimg.height;
+          ctx.width = uploadimg.width;
+          ctx.height = uploadimg.height;
           ctx.drawImage(uploadimg,0,0);
       }
       uploadimg.src = event.target.result;
