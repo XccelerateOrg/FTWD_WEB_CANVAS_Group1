@@ -3,7 +3,6 @@ let countdown
 let timeOut
 
 $("#playGame").click(function drippingTap (time) {
-    // CODE HERE
     input = time = 30
     console.log(`Remaining Time: ${input} ${input===1 || input===0 ? "second" : "seconds"} left.`)
     countdown = setInterval(dropper,1000)
@@ -11,7 +10,6 @@ $("#playGame").click(function drippingTap (time) {
   });
 
   const dropper = () => {
-    // CODE HERE
     input--
     console.log(`Remaining Time: ${input} ${input===1 || input===0 ? "second" : "seconds"} left.`)
     if(input===0){
@@ -20,7 +18,6 @@ $("#playGame").click(function drippingTap (time) {
   };
   
   const turnOffTap = () => {
-    // CODE HERE
     console.log("Alert: Time's up!");
     alert("Time's up!")
   };

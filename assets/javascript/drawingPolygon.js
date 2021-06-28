@@ -8,12 +8,6 @@ class DrawingPolygon extends PaintFunction {
     }
   
     onMouseDown(coord, event) {
-    //   this.ctxDraft.lineWidth = canvasSettings.strokeSize;
-    //   this.ctxDraft.fillStyle = canvasSettings.colorFill;
-    //   this.ctxDraft.strokeStyle = canvasSettings.colorStroke;
-    //   this.ctx.lineWidth = canvasSettings.strokeSize;
-    //   this.ctx.fillStyle = canvasSettings.colorFill;
-    //   this.ctx.strokeStyle = canvasSettings.colorStroke;
 
     this.ctx.fillStyle = canvasSettings.colorFill;
     this.ctxDraft.fillStyle = canvasSettings.colorFill;

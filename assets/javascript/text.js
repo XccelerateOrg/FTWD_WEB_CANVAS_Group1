@@ -3,19 +3,18 @@ class DrawingText extends PaintFunction{
         super();
         this.ctx = ctx;
         this.ctxDraft = ctxDraft;
-        this.fontWeight = 600; //font weight
-        this.fontSize = 35; //font size
-        this.fontStyle = "Arial"; //font-family
-        this.fillStyle = "orange"; //font color
+        this.fontWeight = 600; 
+        this.fontSize = 35; 
+        this.fontStyle = "Arial"; 
+        this.fillStyle = "orange"; 
         this.textX = [];
         this.textY = [];
     }
     
     onMouseDown(coord,event){
-        //Set up ctx text properties
         this.ctx.font = `${this.fontWeight} ${canvasSettings.textSize}px ${canvasSettings.textFont}`;
         this.ctx.fillStyle = canvasSettings.colorStroke;
-        //Store the text starting (x,y)
+
         this.textX.push(coord[0]);
         this.textY.push(coord[1]);
         //Make the input box appear on the clicked area
@@ -26,6 +25,7 @@ class DrawingText extends PaintFunction{
             this.outputText(this.ctx);
         }
     }
+
     //Print the text on the canvas real
     outputText(ctx){
         let inputText = $('#textInput').val();
@@ -34,7 +34,6 @@ class DrawingText extends PaintFunction{
         ctx.fillText(inputText,this.textX[0],this.textY[0]);
         $('#textInput').css({"display":"none","transform":"translateY(0) translateX(0)"});
         $('#textInput').val('');
-        //$('body').find('input[type=text],input').val('');
         this.textX= [];
         this.textY = [];
     }
