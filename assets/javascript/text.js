@@ -22,6 +22,7 @@ class DrawingText extends PaintFunction{
             this.outputText(this.ctx);
         }
     }
+
     //Print the text on the canvas real
     outputText(ctx){
         let inputText = $('#textInput').val();
@@ -30,7 +31,6 @@ class DrawingText extends PaintFunction{
         ctx.fillText(inputText,this.textX[0],this.textY[0]);
         $('#textInput').css({"display":"none","transform":"translateY(0) translateX(0)"});
         $('#textInput').val('');
-        //$('body').find('input[type=text],input').val('');
         this.textX= [];
         this.textY = [];
     }

@@ -25,7 +25,6 @@ class smoothBrush extends PaintFunction {
     }
     onMouseMove(coord, event) {}
     onMouseUp(coord, event) {
-        // push to restoreArray for undo / redo
         restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
         index += 1;
     }
@@ -58,7 +57,6 @@ class shadowBrush extends PaintFunction {
     }
     onMouseMove(coord, event) {}
     onMouseUp(coord, event) {
-        // push to restoreArray for undo / redo
         restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
         index += 1;
     }

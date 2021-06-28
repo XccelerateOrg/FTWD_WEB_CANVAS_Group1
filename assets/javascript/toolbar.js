@@ -1,9 +1,3 @@
-// // Upload
-// $('#upload-btn').click(()=>{
-//     uploadImage();
-//     console.log(`Upload Image`)
-// })
-
 // Clear
 $('#clear-btn').click(() => {
     clear();
@@ -100,13 +94,6 @@ $('#export-btnJPG').click(() => {
 $("#fill-btn").click((e) => {
     currentFunction = new Fill(ctx, ctxDraft)
 });
-
-// // Filter
-// $('#filter-btn').click(()=>{
-//     // currentFunction = new filterBlur(ctx,ctxDraft);
-//     filter()
-//     console.log(`Filter: ${currentFunction}`)
-// });
 
 // Select
 $('#select-btn').click(() => {
