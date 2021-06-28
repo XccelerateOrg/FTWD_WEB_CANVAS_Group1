@@ -107,9 +107,9 @@
                   <li><a href="#" id="clearFilter">Clear Filter</a></li>
                 </ul>
               </span>
-              <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top" title="Undo"><i
+              <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top" title="Undo (Ctrl+Z)"><i
                   class="fas fa-fw fa-undo-alt "></i></button>
-              <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top" title="Redo"><i
+              <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top" title="Redo (Ctrl+Shift+Z)"><i
                   class="fas fa-fw fa-redo-alt"></i></button>
               <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top"
                 title="Eraser"><i class="fas fa-fw fa-eraser"></i></button>
@@ -211,15 +211,10 @@
             <div class="tool-control mb-3">
               <label for="font-weight">Font Weight</label>
               <select class="form-control" id="font-weight" name="font-weight" onchange="canvasSettings.changeText()">
-                <option> 100 </option>
-                <option> 200 </option>
-                <option> 300 </option>
-                <option> 400 </option>
-                <option> 500 </option>
-                <option> 600 </option>
-                <option> 700 </option>
-                <option> 800 </option>
-                <option> 900 </option>
+                <option> Normal </option>
+                <option> Bold </option>
+                <option> Bolder </option>
+                <option> Lighter </option>
               </select>
             </div>
           </div>
