@@ -11,6 +11,9 @@ class DrawingPolygon extends PaintFunction {
     this.ctx.fillStyle = canvasSettings.colorFill;
     this.ctxDraft.fillStyle = canvasSettings.colorFill;
 
+    this.ctx.lineCap = this.ctx.lineJoin = "round";
+    this.ctxDraft.lineCap = this.ctxDraft.lineJoin = "round";
+
     this.ctx.strokeStyle = canvasSettings.colorStroke;
     this.ctxDraft.strokeStyle = canvasSettings.colorStroke;
 
@@ -52,11 +55,11 @@ class DrawingPolygon extends PaintFunction {
               this.size * Math.sin(this.theta + (i * 2 * Math.PI) / this.sides)
           );
         }
-        if (fillStyle) {
+        
           this.ctxDraft.fill();
-        } else {
+        
           this.ctxDraft.stroke();
-        }
+        
       }
     }
   
@@ -87,11 +90,11 @@ class DrawingPolygon extends PaintFunction {
               this.size * Math.sin(this.theta + (i * 2 * Math.PI) / this.sides)
           );
         }
-        if (fillStyle) {
+        
           this.ctx.fill();
-        } else {
+        
           this.ctx.stroke();
-        }
+        
         restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
         index += 1; 
       }
@@ -108,6 +111,7 @@ class DrawingPolygon extends PaintFunction {
       this.ctx.moveTo(x, y);
       this.ctx.closePath();
       this.ctx.stroke();
+      this.ctx.fill();
     }
   }
   
