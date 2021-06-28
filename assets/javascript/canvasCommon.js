@@ -22,25 +22,25 @@ let regularFix = false;
 let centerFix = false;
 
 function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = $("#canvas-container").width();
+  canvas.height = $("#canvas-container").height();
 }
 function resizeCanvasDraft() {
-  canvasDraft.width = window.innerWidth;
-  canvasDraft.height = window.innerHeight;
+  canvasDraft.width = $("#canvas-container").width();
+  canvasDraft.height = $("#canvas-container").height();
 }
 resizeCanvas();
 resizeCanvasDraft();
 
 window.addEventListener("resize", function () {
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  function resizeCanvasDraft() {
-    canvasDraft.width = window.innerWidth;
-    canvasDraft.height = window.innerHeight;
-  }
+  // function resizeCanvas() {
+  //   canvas.width = window.innerWidth;
+  //   canvas.height = window.innerHeight;
+  // }
+  // function resizeCanvasDraft() {
+  //   canvasDraft.width = window.innerWidth;
+  //   canvasDraft.height = window.innerHeight;
+  // }
   resizeCanvas();
   resizeCanvasDraft();
 });
