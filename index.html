@@ -26,9 +26,10 @@
     <canvas id="canvasDraft" class="canvas"></canvas>
     <input id="textInput" name="inputField" value="" style="display: none"></input>
   </div>
-  <div class="btn-container" id="function-bar">
+
+  <div class="btn-icon-container" id="function-bar">
     <button type="button" class="btn" id="upload-btn" data-toggle="tooltip" data-placement="top" title="Upload Image">
-      <i class="fas fa-upload"></i>
+      <i class="fas fa-xs fa-upload"></i>
     </button>
     <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top" title="Arc"><i
         class="fab fa-cuttlefish"></i></button>
@@ -37,15 +38,15 @@
     <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top" title="Rectangle"><i
         class="far fa-square"></i></button>
     <button type="button" class="btn" id="polygon-btn" data-toggle="tooltip" data-placement="top" title="Polygon"><i
-        class="fas fa-draw-polygon"></i></button>
+        class="fas fa-xs fa-draw-polygon"></i></button>
     <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top" title="Curve"><i
-        class="fas fa-bezier-curve"></i></button>
+        class="fas fa-xs fa-bezier-curve"></i></button>
     <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top" title="Line"><i
-        class="fas fa-pencil-alt"></i></button>
+        class="fas fa-xs fa-pencil-alt"></i></button>
     <span class="btn-group">
       <button type="button" id="brush-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false" title="Brush">
-        <i class="fas fa-paint-brush"></i>
+        <i class="fas fa-xs fa-paint-brush"></i>
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
@@ -71,13 +72,13 @@
       </ul>
     </span>
     <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i
-        class="fas fa-font"></i></button>
+        class="fas fa-xs fa-font"></i></button>
     <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
-        class="fas fa-fill-drip"></i></button>
+        class="fas fa-xs fa-fill-drip"></i></button>
     <span class="btn-group">
       <button type="button" id="brush-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false" title="Filter">
-        <i class="fas fa-filter"></i>
+        <i class="fas fa-xs fa-filter"></i>
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
@@ -95,29 +96,29 @@
       </ul>
     </span>
     <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top" title="Undo"><i
-        class="fas fa-undo-alt"></i></button>
+        class="fas fa-xs fa-undo-alt "></i></button>
     <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top" title="Redo"><i
-        class="fas fa-redo-alt"></i></button>
+        class="fas fa-xs fa-redo-alt"></i></button>
     <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top" title="Eraser"><i
-        class="fas fa-eraser"></i></button>
+        class="fas fa-xs fa-eraser"></i></button>
     <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top" title="Clear"><i
-        class="fas fa-times"></i></button>
+        class="fas fa-xs fa-times"></i></button>
     <button type="button" class="btn" id="firebase" data-toggle="tooltip" data-placement="top"
-      title="Firebase">FireBase</button>
+      title="Firebase"><i class="fas fa-xs fa-fire"></i></button>
 
     <!-- <a id="export-btnPNG" download="canvas.png">
       <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip"
-        data-placement="top" title="Export PNG"><i class="fas fa-download"></i></button>
+        data-placement="top" title="Export PNG"><i class="fas fa-xs fa-download"></i></button>
     </a>
     <a id="export-btnJPG" download="canvas.jpg">
       <button type="button" class="btn" id="export-btnJPG" onClick="downloadJPG()" data-toggle="tooltip"
-        data-placement="top" title="Export JPG"><i class="fas fa-download"></i></button>
+        data-placement="top" title="Export JPG"><i class="fas fa-xs fa-download"></i></button>
     </a> -->
 
     <span class="btn-group">
       <button type="button" id="export-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false" title="Export">
-        <i class="fas fa-download"></i>
+        <i class="fas fa-xs fa-download"></i>
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
@@ -126,7 +127,8 @@
       </ul>
     </span>
   </div>
-  <br>
+
+  <div class="rightToolbar">
   <div class="btn-container">
     <div class="color-picker-wrapper">
       <input type="color" class="color-picker" id="colorFill">
@@ -147,6 +149,7 @@
       </div>
     </div>
   </div>
+  
   <div class="btn-container">
     <input type="range" min="1" max="100" class="pen-range" id="pen-range">
     <label for="strokeSize">Stroke Size</label>
@@ -191,6 +194,7 @@
   <div class="btn-container">
     <button type="button" class="btn" id="playGame" data-toggle="tooltip" data-placement="top" title="Fill">Game!</button>
   </div>
+</div>
 
 
   <!-- Invisible Import FileReader -->

@@ -23,11 +23,11 @@ let centerFix = false;
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
-  canvas.height = 800;
+  canvas.height = window.innerHeight;
 }
 function resizeCanvasDraft() {
   canvasDraft.width = window.innerWidth;
-  canvasDraft.height = 800;
+  canvasDraft.height = window.innerHeight;
 }
 resizeCanvas();
 resizeCanvasDraft();
@@ -35,11 +35,11 @@ resizeCanvasDraft();
 window.addEventListener("resize", function () {
   function resizeCanvas() {
     canvas.width = window.innerWidth;
-    canvas.height = 800;
+    canvas.height = window.innerHeight;
   }
   function resizeCanvasDraft() {
     canvasDraft.width = window.innerWidth;
-    canvasDraft.height = 800;
+    canvasDraft.height = window.innerHeight;
   }
   resizeCanvas();
   resizeCanvasDraft();
