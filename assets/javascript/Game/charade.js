@@ -3,7 +3,7 @@ $("#playGame").click(function () {
     getRandomWord(
         (wordSrc) => {
             console.log("Word----", wordSrc)
-            alert(`Your word is "${wordSrc}"`)
+            alert(`Your word is "${wordSrc}" and you have 30 seconds to draw.`)
         }
     )
 });

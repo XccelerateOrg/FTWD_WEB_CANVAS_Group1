@@ -2,7 +2,6 @@ class StampEmoji extends PaintFunction {
     constructor(ctx, ctxDraft) {
         super();
         this.ctx = ctx;
-
     }
 
     onMouseDown(coord, e) {
