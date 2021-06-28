@@ -166,10 +166,9 @@ let canvasSettings = {
   colorHex: [],
   colorHex1: "", 
   strokeSize: 10,
-  // textSize:
   polygonSides: 3,
-  textFont: $('#text-font').val(),
-  textSize: $('#text-size').val(),
+  textFont: "Arial",
+  textSize: "18",
 };
 
 pickrFill.on("save", (color, instance) => {
@@ -211,4 +210,14 @@ $("#pen-range").on("change", (e) => {
 $("#sides-no").on("change", (e) => {
   console.log($(e.target).val());
   canvasSettings.polygonSides = $(e.target).val();
+});
+
+$("#text-font").on("change", (e) => {
+  console.log($(e.target).val());
+  canvasSettings.textFont = $(e.target).val();
+});
+
+$("#text-size").on("change", (e) => {
+  console.log($(e.target).val());
+  canvasSettings.textSize = $(e.target).val();
 });
