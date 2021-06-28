@@ -173,9 +173,20 @@
   </div>
 
   <div class="btn-container">
-    <input type="number" min="12" class="text-size" id="text-size" placeholder="12">
-    <label for="text-size">Font Weight</label>
+    <select id="font-weight" name="font-weight" onchange="canvasSettings.changeText()">
+      <option> 100 </option>
+      <option> 200 </option>
+      <option> 300 </option>
+      <option> 400 </option>
+      <option> 500 </option>
+      <option> 600 </option>
+      <option> 700 </option>
+      <option> 800 </option>
+      <option> 900 </option>
+    </select>
+    <label for="font-weight">Font Weight</label>
   </div>
+
 
   <div class="btn-container">
     <button type="button" class="btn" id="playGame" data-toggle="tooltip" data-placement="top" title="Fill">Game!</button>

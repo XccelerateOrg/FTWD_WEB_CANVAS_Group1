@@ -156,9 +156,9 @@ let canvasSettings = {
   colorHex1: "",
   strokeSize: 10,
   polygonSides: 3,
+  fontWeight: "200",
   textFont: "Arial",
   textSize: "18",
-  fontWeight: "600"
 };
 
 pickrFill.on("save", (color, instance) => {
@@ -215,3 +215,9 @@ $("#text-size").on("change", (e) => {
   console.log($(e.target).val());
   canvasSettings.textSize = $(e.target).val();
 });
+
+$("#font-weight").on("change", (e) => {
+  console.log($(e.target).val());
+  canvasSettings.fontWeight = $(e.target).val();
+});
+
