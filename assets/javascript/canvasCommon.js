@@ -23,6 +23,12 @@ let dragging = false;
 let fontFam = "Georgia, serif";
 let fontSize = "90px";
 
+let isDrawing = false
+let resetDrawing = false
+let fillStyle = false
+let regularFix = false
+let centerFix = false
+
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = 800;
@@ -162,6 +168,8 @@ let canvasSettings = {
   strokeSize: 10,
   // textSize:
   polygonSides: 3,
+  textFont: $('#text-font').val(),
+  textSize: $('#text-size').val(),
 };
 
 pickrFill.on("save", (color, instance) => {

@@ -1,8 +1,8 @@
-// Upload
-$('#upload-btn').click(()=>{
-    uploadImage();
-    console.log(`Upload Image`)
-})
+// // Upload
+// $('#upload-btn').click(()=>{
+//     uploadImage();
+//     console.log(`Upload Image`)
+// })
 
 // Clear
 $('#clear-btn').click(()=>{
@@ -28,17 +28,19 @@ $('#shadowBrush').click(()=>{
 });
 
 $('#radialBrush').click(()=>{
-    currentFunction = new smoothBrush(ctx,ctxDraft);
+    currentFunction = new radialBrush(ctx,ctxDraft);
     console.log(`Drawing Brush: ${currentFunction}`)
 });
 
 $('#penBrush').click(()=>{
-    currentFunction = new smoothBrush(ctx,ctxDraft);
+    alert('To be deployed later')
+    // currentFunction = new penBrush(ctx,ctxDraft);
     console.log(`Drawing Brush: ${currentFunction}`)
 });
 
 $('#multipleLineBrush').click(()=>{
-    currentFunction = new smoothBrush(ctx,ctxDraft);
+    alert('To be deployed later')
+    // currentFunction = new multipleLineBrush(ctx,ctxDraft);
     console.log(`Drawing Brush: ${currentFunction}`)
 });
 
@@ -84,9 +86,15 @@ $('#eraser-btn').click(()=>{
     console.log(`Eraser: ${currentFunction}`)
 });
 
-// Export
-$('#export-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+// Export PNG
+$('#export-btnPNG').click(()=>{
+    downloadPNG()
+    console.log(`Export: ${currentFunction}`)
+});
+
+// Export JPG
+$('#export-btnJPG').click(()=>{
+    downloadJPG()
     console.log(`Export: ${currentFunction}`)
 });
 
@@ -95,12 +103,12 @@ $("#fill-btn").click((e) => {
     currentFunction = new Fill(ctx, ctxDraft)
   });
 
-// Filter
-$('#filter-btn').click(()=>{
-    // currentFunction = new filterBlur(ctx,ctxDraft);
-    filter()
-    console.log(`Filter: ${currentFunction}`)
-});
+// // Filter
+// $('#filter-btn').click(()=>{
+//     // currentFunction = new filterBlur(ctx,ctxDraft);
+//     filter()
+//     console.log(`Filter: ${currentFunction}`)
+// });
 
 // Select
 $('#select-btn').click(()=>{
@@ -116,7 +124,7 @@ $('#select-btn').click(()=>{
 
 // Text
 $('#text-btn').click(()=>{
-    currentFunction = new (ctx, ctxDraft);
+    currentFunction = new DrawingText(ctx, ctxDraft);
     console.log(`Text: ${currentFunction}`)
 });
 
