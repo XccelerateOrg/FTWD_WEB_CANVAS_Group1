@@ -8,8 +8,14 @@
   margin-bottom: 5px;
 }
 
-#playGame{
+/* #playGame{
   float: right;
+} */
+
+.header-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body {

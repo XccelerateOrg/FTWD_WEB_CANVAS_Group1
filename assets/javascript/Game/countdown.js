@@ -4,6 +4,7 @@ let timeOut
 
 $("#playGame").click(function drippingTap (time) {
     input = time = 30
+    
     console.log(`Remaining Time: ${input} ${input===1 || input===0 ? "second" : "seconds"} left.`)
     countdown = setInterval(dropper,1000)
     timeOut = setTimeout(turnOffTap,time*1000)
