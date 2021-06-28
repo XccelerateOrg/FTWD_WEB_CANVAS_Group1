@@ -15,11 +15,11 @@ let dragging = false;
 let fontFam = "Georgia, serif";
 let fontSize = "90px";
 
-let isDrawing = false
-let resetDrawing = false
-let fillStyle = false
-let regularFix = false
-let centerFix = false
+let isDrawing = false;
+let resetDrawing = false;
+let fillStyle = false;
+let regularFix = false;
+let centerFix = false;
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
@@ -29,9 +29,22 @@ function resizeCanvasDraft() {
   canvasDraft.width = window.innerWidth;
   canvasDraft.height = 800;
 }
-
 resizeCanvas();
 resizeCanvasDraft();
+
+window.addEventListener("resize", function () {
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = 800;
+  }
+  function resizeCanvasDraft() {
+    canvasDraft.width = window.innerWidth;
+    canvasDraft.height = 800;
+  }
+  resizeCanvas();
+  resizeCanvasDraft();
+});
+
 
 $(`#canvasDraft`).mousedown(function (e) {
   let mouseX = e.offsetX;
@@ -82,7 +95,7 @@ class PaintFunction {
 }
 
 const pickrConfig = {
-  theme: "classic", 
+  theme: "classic",
 
   swatches: [
     "rgba(244, 67, 54, 1)",
@@ -140,7 +153,7 @@ let canvasSettings = {
   colorFill: "#000000",
   colorFillArray: [],
   colorHex: [],
-  colorHex1: "", 
+  colorHex1: "",
   strokeSize: 10,
   polygonSides: 3,
   textFont: "Arial",
@@ -152,14 +165,18 @@ pickrFill.on("save", (color, instance) => {
   console.log(`color 2string`, color.toRGBA().toString(3));
   console.log(`toRGBA`, color.toRGBA());
   console.log(`toHex`, color.toHEXA());
-  console.log(`basic color`, color)
+  console.log(`basic color`, color);
   canvasSettings.colorFill = color.toRGBA().toString(3);
   canvasSettings.colorFillArray = color.toRGBA();
   canvasSettings.colorHex = color.toHEXA();
-  function colorToHex(){
-    canvasSettings.colorHex1 = `0xFF` + canvasSettings.colorHex[2] + canvasSettings.colorHex[1] + canvasSettings.colorHex[0]
+  function colorToHex() {
+    canvasSettings.colorHex1 =
+      `0xFF` +
+      canvasSettings.colorHex[2] +
+      canvasSettings.colorHex[1] +
+      canvasSettings.colorHex[0];
   }
-  colorToHex()
+  colorToHex();
 });
 
 pickrStroke.on("save", (color, instance) => {

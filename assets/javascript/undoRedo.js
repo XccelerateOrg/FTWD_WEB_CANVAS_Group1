@@ -20,7 +20,6 @@ function redo() {
         reIndex -= 1;
         index += 1;
     } else {
-        // restoreArray = [];
         reIndex = -1;
     }
 }
