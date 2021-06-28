@@ -62,5 +62,3 @@ class DrawingCircle extends PaintFunction{
     onMouseEnter(){}
 
 }
-
-console.log(`a`)
