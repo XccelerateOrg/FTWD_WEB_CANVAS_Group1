@@ -29,7 +29,8 @@ class DrawingText extends PaintFunction{
     //Print the text on the canvas real
     outputText(ctx){
         let inputText = $('#textInput').val();
-        ctx.font = `${canvasSettings.textSize}px ${canvasSettings.textFont}`
+        ctx.font = `${canvasSettings.textSize}px ${canvasSettings.textFont}`;
+        console.log(ctx.font)
         ctx.fillText(inputText,this.textX[0],this.textY[0]);
         $('#textInput').css({"display":"none","transform":"translateY(0) translateX(0)"});
         $('#textInput').val('');
