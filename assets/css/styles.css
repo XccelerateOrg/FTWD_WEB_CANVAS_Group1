@@ -9,7 +9,7 @@ body{
     top: 0px;
     bottom: 0px;
     left:0px;
-    right:0px
+    right:0px;
 }
 
 #item {
@@ -39,15 +39,14 @@ body{
   background: #313131;
 }
 
-
 /* #canvas-container{
     height:720px;
 }  */
 
 .btn-container{
     position:relative;
-    top: 800px;
     display: flex;
+    top: 800px;
     /* justify-content: center; */
     flex-direction: row;
     margin-top: 15px;

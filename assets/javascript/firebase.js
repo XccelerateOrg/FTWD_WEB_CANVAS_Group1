@@ -94,6 +94,5 @@ function server() {
         console.log(uploadTask);
         console.log(uploadTask.snapshot);
         console.log('File available at', downloadURL);
-
     });
 };

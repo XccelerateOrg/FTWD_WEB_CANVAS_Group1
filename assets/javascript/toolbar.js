@@ -46,7 +46,7 @@ $('#multipleLineBrush').click(()=>{
 
 // Drawing Circle
 $('#circle-btn').click(()=>{
-    currentFunction = new DrawingCircle(ctx,ctxDraft);
+    currentFunction = new DrawingCircle (ctx,ctxDraft);
     console.log(`Drawing Circle: ${currentFunction}`)
 });
 
@@ -164,6 +164,7 @@ $(`#firebase`).click(()=>{
     server();
     console.log(`server`)
 })
+
 $(`#heart-btn`).click(()=>{
 
     currentFunction = new StampHeart(ctx)
@@ -171,18 +172,17 @@ $(`#heart-btn`).click(()=>{
 })
 $(`#troll-btn`).click(()=>{
 
-    currentFunction = new StampTroll(ctx)
+    currentFunction = new StampTroll (ctx)
     console.log('stamp')
 })
 $(`#star-btn`).click(()=>{
 
-    currentFunction = new StampStar(ctx)
+    currentFunction = new StampStar (ctx)
     console.log('stamp')
 })
 $(`#emoji-btn`).click(()=>{
-
     currentFunction = new StampEmoji(ctx)
     console.log('stamp')
 })
 
-currentFunction = new DrawingRectangle (ctx,ctxDraft)
+// currentFunction = new DrawingRectangle (ctx,ctxDraft)
