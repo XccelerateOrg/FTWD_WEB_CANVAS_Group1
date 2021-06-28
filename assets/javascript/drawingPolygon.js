@@ -3,17 +3,10 @@ class DrawingPolygon extends PaintFunction {
       super();
       this.ctx = ctx;
       this.ctxDraft = ctxDraft;
-      this.sides = 5;
       resetDrawing = false;
     }
   
     onMouseDown(coord, event) {
-    //   this.ctxDraft.lineWidth = canvasSettings.strokeSize;
-    //   this.ctxDraft.fillStyle = canvasSettings.colorFill;
-    //   this.ctxDraft.strokeStyle = canvasSettings.colorStroke;
-    //   this.ctx.lineWidth = canvasSettings.strokeSize;
-    //   this.ctx.fillStyle = canvasSettings.colorFill;
-    //   this.ctx.strokeStyle = canvasSettings.colorStroke;
 
     this.ctx.fillStyle = canvasSettings.colorFill;
     this.ctxDraft.fillStyle = canvasSettings.colorFill;

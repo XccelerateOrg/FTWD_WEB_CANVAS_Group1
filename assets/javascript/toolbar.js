@@ -5,95 +5,93 @@
 // })
 
 // Clear
-$('#clear-btn').click(()=>{
+$('#clear-btn').click(() => {
     clear();
     console.log(`Cleared`)
 });
 
 // Drawing Arc
-$('#arc-btn').click(()=>{
-    currentFunction = new DrawingArc(ctx,ctxDraft);
+$('#arc-btn').click(() => {
+    currentFunction = new DrawingArc(ctx, ctxDraft);
     console.log(`Drawing Arc: ${currentFunction}`)
 });
 
 // Drawing smoothBrush
-$('#smoothBrush').click(()=>{
-    currentFunction = new smoothBrush(ctx,ctxDraft);
-    console.log(`Drawing Brush: ${currentFunction}`)
+$('#smoothBrush').click(() => {
+    currentFunction = new smoothBrush(ctx, ctxDraft);
+    console.log(`Drawing Smooth Brush: ${currentFunction}`)
 });
 
-$('#shadowBrush').click(()=>{
-    currentFunction = new shadowBrush(ctx,ctxDraft);
-    console.log(`Drawing Brush: ${currentFunction}`)
+$('#shadowBrush').click(() => {
+    currentFunction = new shadowBrush(ctx, ctxDraft);
+    console.log(`Drawing Drop-shadow Brush: ${currentFunction}`)
 });
 
-$('#radialBrush').click(()=>{
-    currentFunction = new radialBrush(ctx,ctxDraft);
-    console.log(`Drawing Brush: ${currentFunction}`)
+$('#radialBrush').click(() => {
+    currentFunction = new radialBrush(ctx, ctxDraft);
+    console.log(`Drawing Radial Gradient Brush: ${currentFunction}`)
 });
 
-$('#penBrush').click(()=>{
-    alert('To be deployed later')
-    // currentFunction = new penBrush(ctx,ctxDraft);
-    console.log(`Drawing Brush: ${currentFunction}`)
+$('#penBrush').click(() => {
+    currentFunction = new penBrush(ctx, ctxDraft);
+    console.log(`Drawing Pen Brush: ${currentFunction}`)
 });
 
-$('#multipleLineBrush').click(()=>{
-    alert('To be deployed later')
-    // currentFunction = new multipleLineBrush(ctx,ctxDraft);
-    console.log(`Drawing Brush: ${currentFunction}`)
+$('#multipleLineBrush').click(() => {
+    currentFunction = new multipleLineBrush(ctx, ctxDraft);
+    console.log(`Drawing Multiple-line Brush: ${currentFunction}`)
 });
 
 // Drawing Circle
-$('#circle-btn').click(()=>{
-    currentFunction = new DrawingCircle (ctx,ctxDraft);
+$('#circle-btn').click(() => {
+    currentFunction = new DrawingCircle(ctx, ctxDraft);
     console.log(`Drawing Circle: ${currentFunction}`)
 });
 
 // Drawing Curve
-$('#curve-btn').click(()=>{
-    currentFunction = new DrawingCurve(ctx,ctxDraft);
+$('#curve-btn').click(() => {
+    currentFunction = new DrawingCurve(ctx, ctxDraft);
     console.log(`Drawing Curve: ${currentFunction}`)
 });
 
 // Drawing Line
-$('#line-btn').click(()=>{
-    currentFunction = new DrawingLine(ctx,ctxDraft);
+$('#line-btn').click(() => {
+    currentFunction = new DrawingLine(ctx, ctxDraft);
     console.log(`Drawing Line: ${currentFunction}`)
 });
 
 // Drawing Polygon
-$('#polygon-btn').click(()=>{
-    currentFunction = new DrawingPolygon(ctx,ctxDraft);
+$('#polygon-btn').click(() => {
+    currentFunction = new DrawingPolygon(ctx, ctxDraft);
     console.log(`Drawing Polygon: ${currentFunction}`)
 });
 
 // Drawing Rectangle
-$('#rectangle-btn').click(()=>{
-    currentFunction = new DrawingRectangle(ctx,ctxDraft);
+$('#rectangle-btn').click(() => {
+    currentFunction = new DrawingRectangle(ctx, ctxDraft);
     console.log(`Drawing Rectangle: ${currentFunction}`)
 });
 
 // Dragger
-$('#drag-btn').click(()=>{
+$('#drag-btn').click(() => {
     MouseTouchTracker()
     console.log(`Drawing Rectangle: ${currentFunction}`)
 });
 
 // Eraser
-$('#eraser-btn').click(()=>{
+$('#eraser-btn').click(() => {
     currentFunction = new DrawingEraser(ctx);
     console.log(`Eraser: ${currentFunction}`)
 });
 
 // Export PNG
-$('#export-btnPNG').click(()=>{
+$('#export-btnPNG').click(() => {
     downloadPNG()
     console.log(`Export: ${currentFunction}`)
 });
 
 // Export JPG
-$('#export-btnJPG').click(()=>{
+$('#export-btnJPG').click(() => {
     downloadJPG()
     console.log(`Export: ${currentFunction}`)
 });
@@ -101,7 +99,7 @@ $('#export-btnJPG').click(()=>{
 //Fill
 $("#fill-btn").click((e) => {
     currentFunction = new Fill(ctx, ctxDraft)
-  });
+});
 
 // // Filter
 // $('#filter-btn').click(()=>{
@@ -111,25 +109,25 @@ $("#fill-btn").click((e) => {
 // });
 
 // Select
-$('#select-btn').click(()=>{
-    currentFunction = new Select(ctx,ctxDraft);
+$('#select-btn').click(() => {
+    currentFunction = new Select(ctx, ctxDraft);
     console.log(`Select: ${currentFunction}`)
 });
 
 //crop
-$('#select-btn').click(()=>{
-    currentFunction = new Select(ctx,ctxDraft);
+$('#select-btn').click(() => {
+    currentFunction = new Select(ctx, ctxDraft);
     console.log(`Select: ${currentFunction}`)
 });
 
 // Text
-$('#text-btn').click(()=>{
+$('#text-btn').click(() => {
     currentFunction = new DrawingText(ctx, ctxDraft);
     console.log(`Text: ${currentFunction}`)
 });
 
 // Undo
-$('#undo-btn').click(()=>{
+$('#undo-btn').click(() => {
     undo();
 });
 
@@ -149,38 +147,38 @@ function KeyPress(e) {
 }
 document.onkeydown = KeyPress;
 // Redo
-$(`#redo-btn`).click(()=>{
+$(`#redo-btn`).click(() => {
     redo();
 })
 
 // Zoom
-$('#zoom-btn').click(()=>{
-    currentFunction = new (ctx,ctxDraft);
+$('#zoom-btn').click(() => {
+    currentFunction = new(ctx, ctxDraft);
     console.log(`Zoom: ${currentFunction}`)
 });
 
 
-$(`#firebase`).click(()=>{
+$(`#firebase`).click(() => {
     server();
     console.log(`server`)
 })
 
-$(`#heart-btn`).click(()=>{
-
+$(`#heart-btn`).click(() => {
     currentFunction = new StampHeart(ctx)
     console.log('stamp')
 })
-$(`#troll-btn`).click(()=>{
 
-    currentFunction = new StampTroll (ctx)
+$(`#troll-btn`).click(() => {
+    currentFunction = new StampTroll(ctx)
     console.log('stamp')
 })
-$(`#star-btn`).click(()=>{
 
-    currentFunction = new StampStar (ctx)
+$(`#star-btn`).click(() => {
+    currentFunction = new StampStar(ctx)
     console.log('stamp')
 })
-$(`#emoji-btn`).click(()=>{
+
+$(`#emoji-btn`).click(() => {
     currentFunction = new StampEmoji(ctx)
     console.log('stamp')
 })

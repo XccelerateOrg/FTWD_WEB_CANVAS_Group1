@@ -3,19 +3,15 @@ class DrawingText extends PaintFunction{
         super();
         this.ctx = ctx;
         this.ctxDraft = ctxDraft;
-        this.fontWeight = 600; //font weight
-        this.fontSize = 35; //font size
-        this.fontStyle = "Arial"; //font-family
-        this.fillStyle = "orange"; //font color
         this.textX = [];
         this.textY = [];
     }
     
     onMouseDown(coord,event){
         //Set up ctx text properties
-        this.ctx.font = `${this.fontWeight} ${canvasSettings.textSize}px ${canvasSettings.textFont}`;
+        this.ctx.font = `${canvasSettings.fontWeight} ${canvasSettings.textSize}px ${canvasSettings.textFont}`;
         this.ctx.fillStyle = canvasSettings.colorStroke;
-        //Store the text starting (x,y)
+
         this.textX.push(coord[0]);
         this.textY.push(coord[1]);
         //Make the input box appear on the clicked area

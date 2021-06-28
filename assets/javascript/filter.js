@@ -8,8 +8,6 @@ $("#blurFilter").click(function () {
     ctx.canvas.style.filter = (filterValue)
 })
 
-
-
 // add brightness
 $("#brightnessFilter").click(function () {
     console.log(`Brightness firing`)

@@ -169,6 +169,7 @@ let canvasSettings = {
   polygonSides: 3,
   textFont: "Arial",
   textSize: "18",
+  fontWeight: "600"
 };
 
 pickrFill.on("save", (color, instance) => {

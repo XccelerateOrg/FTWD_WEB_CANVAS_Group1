@@ -5,12 +5,14 @@ class DrawingEraser extends PaintFunction{
     }
     
     onMouseDown(coord,e){
-        //this.ctx.globalCompositeOperation="destination-out";
         this.ctx.strokeStyle = canvasSettings.colorBackground; 
+        this.ctx.lineCap = "round";
+        this.ctx.lineWidth = canvasSettings.strokeSize;
         // this should not be white
         this.ctx.lineJoin = "round";
-        this.ctx.lineCap = "round"; //lineCap = "butt" or "round"
+        this.ctx.lineCap = "round"; 
         this.ctx.lineWidth = canvasSettings.brushSize;
+        this.ctx.shadowBlur = 0;
         this.ctx.beginPath();
         this.ctx.moveTo(coord[0],coord[1]);
         this.draw(coord[0],coord[1]);
@@ -22,7 +24,6 @@ class DrawingEraser extends PaintFunction{
     onMouseUp(){
         this.ctx.closePath();
         this.ctx.stroke(); 
-        this.onFinish();
         restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
         index += 1;   
     }
@@ -40,9 +41,4 @@ class DrawingEraser extends PaintFunction{
         this.ctx.closePath();
         this.ctx.stroke();
     }
-//     // onFinish(){
-//     //     canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount] = new Image();
-//     //     canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount].src = ctx.toDataURL();
-//     //     canvasSettings.undoObject.actionCount++;
-//     // }
 }
