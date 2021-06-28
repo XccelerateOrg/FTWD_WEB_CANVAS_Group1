@@ -12,7 +12,9 @@ function handleImage(e){
       }
       uploadimg.src = event.target.result;
   }
-  reader.readAsDataURL(e.target.files[0]);     
+  reader.readAsDataURL(e.target.files[0]);
+  restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+  index += 1;     
 }
 
 $("#upload-btn").click(function () {

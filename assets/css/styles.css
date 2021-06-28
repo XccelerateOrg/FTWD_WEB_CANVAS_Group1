@@ -25,6 +25,7 @@ body {
 
 canvas {
   box-shadow: -3px 2px 9px 6px black;
+  /* z-index: -1; */
   /* cursor: pointer; */
 }
 
@@ -41,7 +42,7 @@ padding: 5px
 
 #canvasDraft {
   background-color: transparent;
-  /* z-index: -1; */
+  /* z-index: -2; */
 }
 
 /* body {
