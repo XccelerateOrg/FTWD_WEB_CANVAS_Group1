@@ -6,8 +6,8 @@ class StampTroll extends PaintFunction {
 
     onMouseDown(coord, e) {
         var trollimg = new Image();
-        trollimg.src = "http://www.redspiderfish.com/skoolprojects/aid/img/angry_troll_face.png"; //set the link
-        this.ctx.drawImage(trollimg, coord[0], coord[1]);
+        trollimg.src = "assets/images/troll.png"; //set the link
+        this.ctx.drawImage(trollimg, coord[0], coord[1], trollimg.width / 4, trollimg.height / 4);
         console.log("stamp");
 
 
