@@ -8,7 +8,7 @@ class DrawingText extends PaintFunction{
     }
     
     onMouseDown(coord,event){
-        this.ctx.font = `${canvasSettings.fontWeight} ${canvasSettings.textSize}px ${canvasSettings.textFont}`;
+        this.ctx.font = `${canvasSettings.fontStyle} ${canvasSettings.fontWeight} ${canvasSettings.textSize}px ${canvasSettings.textFont}`;
         console.log(this.ctx.font)
         this.ctx.fillStyle = canvasSettings.colorStroke;
 
@@ -22,9 +22,10 @@ class DrawingText extends PaintFunction{
             this.outputText(this.ctx);
         }
     }
-    outputText(ctx){
+    outputText(ctx, ctxDraft){
         let inputText = $('#textInput').val();
-        ctx.font = `${canvasSettings.textSize}px ${canvasSettings.textFont}`;
+        // ctx.font = `${canvasSettings.textSize}px ${canvasSettings.textFont}`;
+        ctx.font = `${canvasSettings.fontStyle} ${canvasSettings.fontWeight} ${canvasSettings.textSize}px ${canvasSettings.textFont}`;
         console.log(ctx.font)
         ctx.fillText(inputText,this.textX[0],this.textY[0]);
         $('#textInput').css({"display":"none","transform":"translateY(0) translateX(0)"});
