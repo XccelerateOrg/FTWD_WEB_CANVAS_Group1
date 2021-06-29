@@ -3,9 +3,9 @@
 } */
 
 #logo {
-  height: 15vh;
-  width: auto;
-  margin-bottom: 5px;
+  /* height: 15vh; */
+  /* width: auto; */
+  margin-bottom: 3px;
 }
 
 /* #playGame{
@@ -16,11 +16,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* flex-wrap: wrap; */
 }
 
+.header-container-wrapper{
+  display:flex;
+  flex-direction: column;
+  /* flex-wrap:wrap; */
+}
+
+#timer{
+  color:white
+}
+
+#playGame{
+  width: 200px;
+}
+#countdown-timer{
+  color: white;
+  font-weight: bold;
+  font-size:larger;
+}
 body {
-  background-color: #111528;
-  padding: 20px;
+  background-color:#02585B;
+  padding: 15px;
 }
 
 .canvas {
@@ -30,7 +49,7 @@ body {
 }
 
 canvas {
-  box-shadow: -3px 2px 9px 6px black;
+  box-shadow: -3px 2px 9px 6px darkslategrey;
   /* z-index: -1; */
   /* cursor: pointer; */
 }
@@ -66,7 +85,7 @@ padding: 5px
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 76vh;
+  max-height: 75vh;
     overflow-y: scroll;
   /* align-items: flex-start; */
 }
@@ -87,6 +106,10 @@ padding: 5px
   background-color: darkslategray;
 }
 
+.tooltip {
+  position: fixed;
+}
+
 /* Remove arrow in dropdown list */
 .btn-icon-container .caret {
   display: none !important;
@@ -100,7 +123,7 @@ padding: 5px
   background-color: white;
 }
 
-.left-toolbar {
+.right-toolbar {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -115,7 +138,7 @@ padding: 5px
   margin-left: 5px !important;
 }
 
-.right-toolbar {
+.left-toolbar {
   display: flex;
   /* align-items: stretch; */
   /* justify-content: end; */

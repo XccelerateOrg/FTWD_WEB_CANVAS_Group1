@@ -49,7 +49,7 @@ $('#circle-btn').click(() => {
 
 // Drawing Curve
 $('#curve-btn').click(() => {
-    currentFunction = new DrawingCurve (ctx, ctxDraft);
+    currentFunction = new DrawingCurve(ctx, ctxDraft);
     console.log(`Drawing Curve: ${currentFunction}`)
 });
 
@@ -112,12 +112,6 @@ $('#select-btn').click(() => {
     console.log(`Select: ${currentFunction}`)
 });
 
-//crop
-$('#select-btn').click(() => {
-    currentFunction = new Select(ctx, ctxDraft);
-    console.log(`Select: ${currentFunction}`)
-});
-
 // Text
 $('#text-btn').click(() => {
     currentFunction = new DrawingText(ctx, ctxDraft);
@@ -129,21 +123,6 @@ $('#undo-btn').click(() => {
     undo();
 });
 
-function KeyPress(e) {
-    var evtobj = window.event ? event : e
-    console.log(evtobj.key)
-    //Do action on CTRL + Z
-    if (evtobj.keyCode == 90 && evtobj.ctrlKey || evtobj.keyCode == 90 && evtobj.metaKey && evtobj.shiftKey == false) {
-        undo()
-        console.log("Ctrl + Z Pressed");
-    }
-    if (evtobj.key == "y" && evtobj.ctrlKey || evtobj.keyCode == 90 && evtobj.shiftKey && evtobj.metaKey) {
-        redo()
-        console.log("Ctrl + shift + Z Pressed");
-    }
-
-}
-document.onkeydown = KeyPress;
 // Redo
 $(`#redo-btn`).click(() => {
     redo();
