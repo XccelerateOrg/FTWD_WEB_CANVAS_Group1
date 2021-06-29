@@ -33,6 +33,8 @@ resizeCanvas();
 resizeCanvasDraft();
 
 window.addEventListener("resize", function () {
+  restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+  index += 1; 
   // function resizeCanvas() {
   //   canvas.width = window.innerWidth;
   //   canvas.height = window.innerHeight;
@@ -43,6 +45,7 @@ window.addEventListener("resize", function () {
   // }
   resizeCanvas();
   resizeCanvasDraft();
+  undo()
 });
 
 
