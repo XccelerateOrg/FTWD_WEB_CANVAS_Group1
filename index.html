@@ -42,127 +42,7 @@
   <div class="row">
 
     <div class="col-sm-2">
-      <div class="left-toolbar">
-        <div class="panel panel-info">
-          <div class="panel-heading">Tools</div>
-          <div class="panel-body">
-            <div class="btn-icon-container" id="function-bar">
-              <button type="button" class="btn" id="upload-btn" data-toggle="tooltip" data-placement="top"
-                title="Upload Image">
-                <i class="fas fa-fw fa-upload"></i>
-              </button>
-              <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top" title="Arc"><i
-                  class="fab fa-fw fa-cuttlefish"></i></button>
-              <button type="button" class="btn" id="circle-btn" data-toggle="tooltip" data-placement="top"
-                title="Circle"><i class="far fa-fw fa-circle"></i></button>
-              <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top"
-                title="Rectangle"><i class="far fa-fw fa-square"></i></button>
-              <button type="button" class="btn" id="polygon-btn" data-toggle="tooltip" data-placement="top"
-                title="Polygon"><i class="fas fa-fw fa-draw-polygon"></i></button>
-              <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top"
-                title="Curve"><i class="fas fa-fw fa-bezier-curve"></i></button>
-              <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top" title="Line"><i
-                  class="fas fa-fw fa-pencil-alt"></i></button>
-              <span class="btn-group">
-                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" title="Brush">
-                  <i class="fas fa-fw fa-paint-brush"></i>
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#" id="smoothBrush">Smooth</a></li>
-                  <li><a href="#" id="shadowBrush">Shadow</a></li>
-                  <li><a href="#" id="radialBrush">Radial gradient</a></li>
-                  <li><a href="#" id="penBrush">Pen</a></li>
-                  <li><a href="#" id="multipleLineBrush">Multiple lines</a></li>
-                </ul>
-              </span>
-
-              <span class="btn-group">
-                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" title="Stamp">
-                  <i class="far fa-fw fa-smile-beam"></i>
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#" id="emoji-btn" data-toggle="tooltip" data-placement="top" title="Emoji">Emoji</a></li>
-                  <li><a href="#" id="star-btn" data-toggle="tooltip" data-placement="top" title="Star">Star</a></li>
-                  <li><a href="#" id="troll-btn" data-toggle="tooltip" data-placement="top" title="Troll">Troll</a></li>
-                  <li><a href="#" id="heart-btn" data-toggle="tooltip" data-placement="top" title="Heart">Heart</a></li>
-                </ul>
-              </span>
-              <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i
-                  class="fas fa-fw fa-font"></i></button>
-              <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
-                  class="fas fa-fw fa-fill-drip"></i></button>
-              <span class="btn-group">
-                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" title="Filter">
-                  <i class="fas fa-fw fa-filter"></i>
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#" id="brightnessFilter">Brightness</a></li>
-                  <li><a href="#" id="contrastFilter">Contrast</a></li>
-                  <li><a href="#" id="blurFilter">Blur</a></li>
-                  <li><a href="#" id="dropShadowFilter">Drop Shadow</a></li>
-                  <li><a href="#" id="grayscaleFilter">Grayscale</a></li>
-                  <li><a href="#" id="hueFilter">Hue Rotate</a></li>
-                  <li><a href="#" id="opacityFilter">Opacity</a></li>
-                  <li><a href="#" id="invertFilter">Invert</a></li>
-                  <li><a href="#" id="satuateFilter">Satuation</a></li>
-                  <li><a href="#" id="sepiaFilter">Sepia</a></li>
-                  <li><a href="#" id="clearFilter">Clear Filter</a></li>
-                </ul>
-              </span>
-              <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top"
-                title="Undo (Ctrl+Z)"><i class="fas fa-fw fa-undo-alt "></i></button>
-              <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top"
-                title="Redo (Ctrl+Shift+Z)"><i class="fas fa-fw fa-redo-alt"></i></button>
-              <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top"
-                title="Eraser"><i class="fas fa-fw fa-eraser"></i></button>
-              <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top"
-                title="Clear"><i class="fas fa-fw fa-times"></i></button>
-              <button type="button" class="btn" id="firebase" data-toggle="tooltip" data-placement="top"
-                title="Firebase"><i class="fas fa-fw fa-fire"></i></button>
-
-              <!-- <a id="export-btnPNG" download="canvas.png">
-      <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip"
-        data-placement="top" title="Export PNG"><i class="fas fa-fw fa-download"></i></button>
-    </a>
-    <a id="export-btnJPG" download="canvas.jpg">
-      <button type="button" class="btn" id="export-btnJPG" onClick="downloadJPG()" data-toggle="tooltip"
-        data-placement="top" title="Export JPG"><i class="fas fa-fw fa-download"></i></button>
-    </a> -->
-
-              <span class="btn-group">
-                <button type="button" id="export-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" title="Export">
-                  <i class="fas fa-fw fa-download"></i>
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#" id="export-btnPNG" download="canvas.png">png</a></li>
-                  <li><a href="#" id="export-btnJPG" download="canvas.jpg">jpg</a></li>
-                </ul>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-8" id="canvas-column">
-      <div id="canvas-container" class='canvas-container'>
-        <canvas id="canvas" class="canvas"></canvas>
-        <canvas id="canvasDraft" class="canvas"></canvas>
-        <input id="textInput" name="inputField" value="" style="display: none"></input>
-      </div>
-    </div>
-
-    <div class="col-sm-2">
       <div class="right-toolbar">
-
         <div class="colour-pickers panel panel-success">
           <div class="panel-heading"> Colour </div>
           <div class="panel-body">
@@ -186,7 +66,6 @@
             </div>
           </div>
         </div>
-
 
         <div class="panel panel-warning">
           <div class="panel-heading">Text</div>
@@ -246,7 +125,127 @@
 
       </div>
     </div>
-  </div>
+
+    <div class="col-sm-8" id="canvas-column">
+      <div id="canvas-container" class='canvas-container'>
+        <canvas id="canvas" class="canvas"></canvas>
+        <canvas id="canvasDraft" class="canvas"></canvas>
+        <input id="textInput" name="inputField" value="" style="display: none"></input>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="left-toolbar">
+        <div class="panel panel-info">
+          <div class="panel-heading">Tools</div>
+          <div class="panel-body">
+            <div class="btn-icon-container" id="function-bar">
+              <span class="btn-group">
+                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" title="Brush">
+                  <i class="fas fa-fw fa-paint-brush"></i>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" id="smoothBrush">Smooth</a></li>
+                  <li><a href="#" id="shadowBrush">Shadow</a></li>
+                  <li><a href="#" id="radialBrush">Radial gradient</a></li>
+                  <li><a href="#" id="penBrush">Pen</a></li>
+                  <li><a href="#" id="multipleLineBrush">Multiple lines</a></li>
+                </ul>
+              </span>
+              <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top" title="Line"><i
+                  class="fas fa-fw fa-pencil-alt"></i></button>
+              <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top" title="Arc"><i
+                  class="fab fa-fw fa-cuttlefish"></i></button>
+              <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top"
+                title="Curve"><i class="fas fa-fw fa-bezier-curve"></i></button>
+              <button type="button" class="btn" id="circle-btn" data-toggle="tooltip" data-placement="top"
+                title="Circle"><i class="far fa-fw fa-circle"></i></button>
+              <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top"
+                title="Rectangle"><i class="far fa-fw fa-square"></i></button>
+              <button type="button" class="btn" id="polygon-btn" data-toggle="tooltip" data-placement="top"
+                title="Regular Polygon"><i class="fas fa-fw fa-vector-square"></i></button>
+              <button type="button" class="btn" id="irregular-polygon-btn" data-toggle="tooltip" data-placement="top"
+                title="Irregular Polygon"><i class="fas fa-fw fa-draw-polygon"></i></button>
+              <span class="btn-group">
+                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" title="Filter">
+                  <i class="fas fa-fw fa-filter"></i>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" id="brightnessFilter">Brightness</a></li>
+                  <li><a href="#" id="contrastFilter">Contrast</a></li>
+                  <li><a href="#" id="blurFilter">Blur</a></li>
+                  <li><a href="#" id="dropShadowFilter">Drop Shadow</a></li>
+                  <li><a href="#" id="grayscaleFilter">Grayscale</a></li>
+                  <li><a href="#" id="hueFilter">Hue Rotate</a></li>
+                  <li><a href="#" id="opacityFilter">Opacity</a></li>
+                  <li><a href="#" id="invertFilter">Invert</a></li>
+                  <li><a href="#" id="satuateFilter">Satuation</a></li>
+                  <li><a href="#" id="sepiaFilter">Sepia</a></li>
+                  <li><a href="#" id="clearFilter">Clear Filter</a></li>
+                </ul>
+              </span>
+              <span class="btn-group">
+                <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" title="Stamp">
+                  <i class="far fa-fw fa-smile-beam"></i>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" id="emoji-btn" data-toggle="tooltip" data-placement="top" title="Emoji">Emoji</a></li>
+                  <li><a href="#" id="star-btn" data-toggle="tooltip" data-placement="top" title="Star">Star</a></li>
+                  <li><a href="#" id="troll-btn" data-toggle="tooltip" data-placement="top" title="Troll">Troll</a></li>
+                  <li><a href="#" id="heart-btn" data-toggle="tooltip" data-placement="top" title="Heart">Heart</a></li>
+                </ul>
+              </span>
+              <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i
+                  class="fas fa-fw fa-font"></i></button>
+              <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
+                  class="fas fa-fw fa-fill-drip"></i></button>
+
+              <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top"
+                title="Undo (Ctrl+Z)"><i class="fas fa-fw fa-undo-alt "></i></button>
+              <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top"
+                title="Redo (Ctrl+Shift+Z)"><i class="fas fa-fw fa-redo-alt"></i></button>
+              <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top"
+                title="Eraser"><i class="fas fa-fw fa-eraser"></i></button>
+              <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top"
+                title="Clear"><i class="fas fa-fw fa-times"></i></button>
+              <button type="button" class="btn" id="upload-btn" data-toggle="tooltip" data-placement="top"
+                title="Upload Image">
+                <i class="fas fa-fw fa-upload"></i>
+              </button>
+              <button type="button" class="btn" id="firebase" data-toggle="tooltip" data-placement="top"
+                title="Firebase"><i class="fas fa-fw fa-fire"></i></button>
+
+              <!-- <a id="export-btnPNG" download="canvas.png">
+      <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip"
+        data-placement="top" title="Export PNG"><i class="fas fa-fw fa-download"></i></button>
+    </a>
+    <a id="export-btnJPG" download="canvas.jpg">
+      <button type="button" class="btn" id="export-btnJPG" onClick="downloadJPG()" data-toggle="tooltip"
+        data-placement="top" title="Export JPG"><i class="fas fa-fw fa-download"></i></button>
+    </a> -->
+
+              <span class="btn-group">
+                <button type="button" id="export-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" title="Export">
+                  <i class="fas fa-fw fa-download"></i>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" id="export-btnPNG" download="canvas.png">png</a></li>
+                  <li><a href="#" id="export-btnJPG" download="canvas.jpg">jpg</a></li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 

@@ -6,7 +6,7 @@ class StampEmoji extends PaintFunction {
 
     onMouseDown(coord, e) {
         var emoji = new Image();
-        emoji.src = "assets/images/grinning.png" //set the link
+        emoji.src = "./assets/images/smile.png" //set the link
         this.ctx.drawImage(emoji, coord[0], coord[1]);
         console.log("Emoji stamp");
         restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
