@@ -1,3 +1,3 @@
-$(document).ready(function() {
-    $('button').tooltip();
-});
+// $(document).ready(function() {
+//     $('button').tooltip();
+// });

@@ -1,3 +1,8 @@
+// Label over hover 
+$(document).ready(function() {
+    $('button').tooltip();
+});
+
 // Clear
 $('#clear-btn').click(() => {
     clear();
@@ -44,20 +49,26 @@ $('#circle-btn').click(() => {
 
 // Drawing Curve
 $('#curve-btn').click(() => {
-    currentFunction = new DrawingCurve(ctx, ctxDraft);
+    currentFunction = new DrawingCurve (ctx, ctxDraft);
     console.log(`Drawing Curve: ${currentFunction}`)
 });
 
 // Drawing Line
 $('#line-btn').click(() => {
-    currentFunction = new DrawingLine(ctx, ctxDraft);
+    currentFunction = new DrawingLine (ctx, ctxDraft);
     console.log(`Drawing Line: ${currentFunction}`)
 });
 
-// Drawing Polygon
-$('#polygon-btn').click(() => {
-    currentFunction = new DrawingPolygon(ctx, ctxDraft);
-    console.log(`Drawing Polygon: ${currentFunction}`)
+// Drawing Regular Polygon
+$('#regular-polygon-btn').click(() => {
+    currentFunction = new DrawingRegularPolygon(ctx, ctxDraft);
+    console.log(`Drawing Regular Polygon: ${currentFunction}`)
+});
+
+// Drawing Irregular Polygon
+$('#irregular-polygon-btn').click(() => {
+    currentFunction = new DrawingIrregularPolygon(ctx, ctxDraft);
+    console.log(`Drawing Irregular Polygon: ${currentFunction}`)
 });
 
 // Drawing Rectangle
