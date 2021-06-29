@@ -1,4 +1,4 @@
-class DrawingPolygon extends PaintFunction {
+class DrawingRegularPolygon extends PaintFunction {
     constructor(ctx, ctxDraft) {
       super();
       this.ctx = ctx;
@@ -13,7 +13,7 @@ class DrawingPolygon extends PaintFunction {
 
     this.ctx.lineCap = this.ctx.lineJoin = "round";
     this.ctxDraft.lineCap = this.ctxDraft.lineJoin = "round";
-    
+
     this.ctx.shadowBlur = 0;
     this.ctxDraft.shadowBlur = 0;
 

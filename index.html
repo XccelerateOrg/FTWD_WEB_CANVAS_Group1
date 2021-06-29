@@ -142,7 +142,7 @@
             <div class="btn-icon-container" id="function-bar">
               <span class="btn-group">
                 <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" title="Brush">
+                  aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="top" title="Brush">
                   <i class="fas fa-fw fa-paint-brush"></i>
                   <span class="caret"></span>
                 </button>
@@ -161,10 +161,10 @@
               <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top"
                 title="Curve"><i class="fas fa-fw fa-bezier-curve"></i></button>
               <button type="button" class="btn" id="circle-btn" data-toggle="tooltip" data-placement="top"
-                title="Circle"><i class="far fa-fw fa-circle"></i></button>
+                title="Circle"><i class="fas fa-fw fa-circle"></i></button>
               <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top"
-                title="Rectangle"><i class="far fa-fw fa-square"></i></button>
-              <button type="button" class="btn" id="polygon-btn" data-toggle="tooltip" data-placement="top"
+                title="Rectangle"><i class="fas fa-fw fa-square"></i></button>
+              <button type="button" class="btn" id="regular-polygon-btn" data-toggle="tooltip" data-placement="top"
                 title="Regular Polygon"><i class="fas fa-fw fa-vector-square"></i></button>
               <button type="button" class="btn" id="irregular-polygon-btn" data-toggle="tooltip" data-placement="top"
                 title="Irregular Polygon"><i class="fas fa-fw fa-draw-polygon"></i></button>
@@ -191,7 +191,7 @@
               <span class="btn-group">
                 <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" title="Stamp">
-                  <i class="far fa-fw fa-smile-beam"></i>
+                  <i class="fas fa-fw fa-smile-beam"></i>
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -205,7 +205,8 @@
                   class="fas fa-fw fa-font"></i></button>
               <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
                   class="fas fa-fw fa-fill-drip"></i></button>
-
+              <button type="button" class="btn" id="select-btn" data-toggle="tooltip" data-placement="top"
+                title="Select"><i class="fas fa-fw fa-hand-pointer"></i></button>
               <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top"
                 title="Undo (Ctrl+Z)"><i class="fas fa-fw fa-undo-alt "></i></button>
               <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top"
@@ -293,8 +294,11 @@
   <!-- Drawing Line -->
   <script src="assets/javascript/drawingLine.js" async defer></script>
 
-  <!-- Drawing Polygon -->
-  <script src="assets/javascript/drawingPolygon.js" async defer></script>
+  <!-- Drawing Regular Polygon -->
+  <script src="assets/javascript/drawingRegularPolygon.js" async defer></script>
+
+  <!-- Drawing Irregular Polygon -->
+  <script src="assets/javascript/drawingIrregularPolygon.js" async defer></script>
 
   <!-- Drawing Rectangle -->
   <script src="assets/javascript/drawingRectangle.js" async defer></script>
@@ -324,17 +328,17 @@
   <!-- Text -->
   <script async defer src="assets/javascript/text.js"></script>
 
-  <!-- Toolbar -->
-  <script src="assets/javascript/toolbar.js" async defer></script>
-
   <!--Tooltip-->
-  <script src="assets/javascript/tooltip.js" async defer></script>
+  <!-- <script src="assets/javascript/tooltip.js" async defer></script> -->
 
   <!-- Undo / Redo -->
   <script src="assets/javascript/undoRedo.js" async defer></script>
 
   <!-- Upload -->
   <script src="assets/javascript/upload.js" async defer></script>
+
+  <!-- Toolbar -->
+  <script src="assets/javascript/toolbar.js" async defer></script>
 
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
