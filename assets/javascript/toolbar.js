@@ -152,22 +152,23 @@ $(`#firebase`).click(() => {
 
 $(`#heart-btn`).click(() => {
     currentFunction = new StampHeart(ctx)
-    console.log('stamp')
+    console.log('Heart stamp')
 })
 
 $(`#troll-btn`).click(() => {
     currentFunction = new StampTroll(ctx)
-    console.log('stamp')
+    console.log('Troll stamp')
 })
 
 $(`#star-btn`).click(() => {
     currentFunction = new StampStar(ctx)
-    console.log('stamp')
+    console.log('Star stamp')
 })
 
 $(`#emoji-btn`).click(() => {
     currentFunction = new StampEmoji(ctx)
-    console.log('stamp')
+    console.log('Emoji stamp')
 })
 
-// currentFunction = new DrawingRectangle (ctx,ctxDraft)
+// Default Current Function
+currentFunction = new smoothBrush(ctx, ctxDraft);
