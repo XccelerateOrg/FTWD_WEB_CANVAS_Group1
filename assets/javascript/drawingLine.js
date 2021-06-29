@@ -35,8 +35,6 @@ class DrawingLine extends PaintFunction {
     this.ctx.stroke();
     restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
     index += 1;
-    console.log(`index`, index);
-    console.log(`redo`, reIndex);
   }
 
 }

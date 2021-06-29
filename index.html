@@ -19,30 +19,42 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <!-- <link rel="stylesheet" href="assets/css/game.css"> -->
 </head>
 
 <body>
   <div class="row header" id="header">
+
     <div class="col-sm-2">
       <div class="header-wrapper">
-        <img id="logo" src="./assets/images/pictionblurLogo.png">
+        <img id="logo" src="./assets/images/MyCanvasLogo.png">
       </div>
     </div>
+
     <div class="col-sm-8">
-      <div class="header-wrapper"></div>
+      <div class="header-wrapper"> T-REX GAME </div>
     </div>
+
     <div class="col-sm-2">
       <div class="header-wrapper">
-        <button type="button" class="btn" id="playGame" data-toggle="tooltip" data-placement="top" title="Start">Play a
-          game!</button>
+        <div class="header-container-wrapper">
+          <div class="header-container col-sm-6">
+            <button type="button" class="btn" id="playGame" data-toggle="tooltip" data-placement="bottom"
+              title="Start">Draw Something!</button>
+          </div>
+          <div class="header-container col-sm-6">
+            <i class="fas fa-2x fa-clock" id="timer"></i><p id="countdown-timer">30 seconds</p>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 
   <div class="row">
 
     <div class="col-sm-2">
-      <div class="right-toolbar">
+      <div class="left-toolbar">
         <div class="colour-pickers panel panel-success">
           <div class="panel-heading"> Colour </div>
           <div class="panel-body">
@@ -135,14 +147,15 @@
     </div>
 
     <div class="col-sm-2">
-      <div class="left-toolbar">
+      <div class="right-toolbar">
         <div class="panel panel-info">
           <div class="panel-heading">Tools</div>
           <div class="panel-body">
             <div class="btn-icon-container" id="function-bar">
               <span class="btn-group">
                 <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="top" title="Brush">
+                  aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="top"
+                  title="Brush (B)">
                   <i class="fas fa-fw fa-paint-brush"></i>
                   <span class="caret"></span>
                 </button>
@@ -154,20 +167,20 @@
                   <li><a href="#" id="multipleLineBrush">Multiple lines</a></li>
                 </ul>
               </span>
-              <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top" title="Line"><i
-                  class="fas fa-fw fa-pencil-alt"></i></button>
-              <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top" title="Arc"><i
-                  class="fab fa-fw fa-cuttlefish"></i></button>
+              <button type="button" class="btn" id="line-btn" data-toggle="tooltip" data-placement="top"
+                title="Line (L)"><i class="fas fa-fw fa-pencil-alt"></i></button>
+              <button type="button" class="btn" id="arc-btn" data-toggle="tooltip" data-placement="top"
+                title="Arc (A)"><i class="fab fa-fw fa-cuttlefish"></i></button>
               <button type="button" class="btn" id="curve-btn" data-toggle="tooltip" data-placement="top"
-                title="Curve"><i class="fas fa-fw fa-bezier-curve"></i></button>
+                title="Curve (U)"><i class="fas fa-fw fa-bezier-curve"></i></button>
               <button type="button" class="btn" id="circle-btn" data-toggle="tooltip" data-placement="top"
-                title="Circle"><i class="fas fa-fw fa-circle"></i></button>
+                title="Circle (C)"><i class="fas fa-fw fa-circle"></i></button>
               <button type="button" class="btn" id="rectangle-btn" data-toggle="tooltip" data-placement="top"
-                title="Rectangle"><i class="fas fa-fw fa-square"></i></button>
+                title="Rectangle (R)"><i class="fas fa-fw fa-square"></i></button>
               <button type="button" class="btn" id="regular-polygon-btn" data-toggle="tooltip" data-placement="top"
-                title="Regular Polygon"><i class="fas fa-fw fa-vector-square"></i></button>
+                title="Regular Polygon (P)"><i class="fas fa-fw fa-vector-square"></i></button>
               <button type="button" class="btn" id="irregular-polygon-btn" data-toggle="tooltip" data-placement="top"
-                title="Irregular Polygon"><i class="fas fa-fw fa-draw-polygon"></i></button>
+                title="Irregular Polygon (I)"><i class="fas fa-fw fa-draw-polygon"></i></button>
               <span class="btn-group">
                 <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false" title="Filter">
@@ -190,7 +203,7 @@
               </span>
               <span class="btn-group">
                 <button type="button" id="brush-btn" class="btn dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" title="Stamp">
+                  aria-haspopup="true" aria-expanded="false" title="Stamp (S)">
                   <i class="fas fa-fw fa-smile-beam"></i>
                   <span class="caret"></span>
                 </button>
@@ -201,26 +214,26 @@
                   <li><a href="#" id="heart-btn" data-toggle="tooltip" data-placement="top" title="Heart">Heart</a></li>
                 </ul>
               </span>
-              <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top" title="Text"><i
-                  class="fas fa-fw fa-font"></i></button>
-              <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top" title="Fill"><i
-                  class="fas fa-fw fa-fill-drip"></i></button>
+              <button type="button" class="btn" id="text-btn" data-toggle="tooltip" data-placement="top"
+                title="Text (T)"><i class="fas fa-fw fa-font"></i></button>
+              <button type="button" class="btn" id="fill-btn" data-toggle="tooltip" data-placement="top"
+                title="Fill (F)"><i class="fas fa-fw fa-fill-drip"></i></button>
               <button type="button" class="btn" id="select-btn" data-toggle="tooltip" data-placement="top"
-                title="Select"><i class="fas fa-fw fa-hand-pointer"></i></button>
+                title="Select (S)"><i class="fas fa-fw fa-hand-pointer"></i></button>
               <button type="button" class="btn" id="undo-btn" data-toggle="tooltip" data-placement="top"
                 title="Undo (Ctrl+Z)"><i class="fas fa-fw fa-undo-alt "></i></button>
               <button type="button" class="btn" id="redo-btn" data-toggle="tooltip" data-placement="top"
                 title="Redo (Ctrl+Shift+Z)"><i class="fas fa-fw fa-redo-alt"></i></button>
               <button type="button" class="btn" id="eraser-btn" data-toggle="tooltip" data-placement="top"
-                title="Eraser"><i class="fas fa-fw fa-eraser"></i></button>
+                title="Eraser (E)"><i class="fas fa-fw fa-eraser"></i></button>
               <button type="button" class="btn" id="clear-btn" data-toggle="tooltip" data-placement="top"
-                title="Clear"><i class="fas fa-fw fa-times"></i></button>
+                title="Clear (Ctrl+X)"><i class="fas fa-fw fa-times"></i></button>
               <button type="button" class="btn" id="upload-btn" data-toggle="tooltip" data-placement="top"
-                title="Upload Image">
+                title="Upload Image (Ctrl+U)">
                 <i class="fas fa-fw fa-upload"></i>
               </button>
               <button type="button" class="btn" id="firebase" data-toggle="tooltip" data-placement="top"
-                title="Firebase"><i class="fas fa-fw fa-fire"></i></button>
+                title="Firebase (Ctrl+F)"><i class="fas fa-fw fa-fire"></i></button>
 
               <!-- <a id="export-btnPNG" download="canvas.png">
       <button type="button" class="btn" id="export-btnPNG" onClick="downloadPNG()" data-toggle="tooltip"
@@ -233,7 +246,7 @@
 
               <span class="btn-group">
                 <button type="button" id="export-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" title="Export">
+                  aria-haspopup="true" aria-expanded="false" title="Export (Ctrl+E)">
                   <i class="fas fa-fw fa-download"></i>
                   <span class="caret"></span>
                 </button>
@@ -246,113 +259,115 @@
           </div>
         </div>
       </div>
+
     </div>
 
-  </div>
+    <!-- Invisible Import FileReader -->
+    <input type="file" id="upload" name="imageLoader" style="display: none" size="10" />
 
-  <!-- Invisible Import FileReader -->
-  <input type="file" id="upload" name="imageLoader" style="display: none" size="10" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.4.5/jscolor.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.4.5/jscolor.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.min.js"></script>
+    <!-- Color Pickr-->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
 
-  <!-- Color Pickr-->
-  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <!-- Canvas Common -->
+    <script src="assets/javascript/canvasCommon.js" async defer></script>
 
-  <!-- Canvas Common -->
-  <script src="assets/javascript/canvasCommon.js" async defer></script>
+    <!-- Clear -->
+    <script src="assets/javascript/clear.js"></script>
 
-  <!-- Clear -->
-  <script src="assets/javascript/clear.js"></script>
+    <!-- Drawing Arc -->
+    <script src="assets/javascript/drawingArc.js" async defer></script>
 
-  <!-- Drawing Arc -->
-  <script src="assets/javascript/drawingArc.js" async defer></script>
+    <!-- Drawing brush -->
+    <script src="assets/javascript/drawingBrush.js" async defer></script>
 
-  <!-- Drawing brush -->
-  <script src="assets/javascript/drawingBrush.js" async defer></script>
+    <!-- Drawing Circle-->
+    <script src="assets/javascript/drawingCircle.js" async defer></script>
 
-  <!-- Drawing Circle-->
-  <script src="assets/javascript/drawingCircle.js" async defer></script>
+    <!-- Drawing Curve -->
+    <script src="assets/javascript/drawingCurve.js" async defer></script>
 
-  <!-- Drawing Curve -->
-  <script src="assets/javascript/drawingCurve.js" async defer></script>
+    <!-- Drawing Line -->
+    <script src="assets/javascript/drawingLine.js" async defer></script>
 
-  <!-- Drawing Line -->
-  <script src="assets/javascript/drawingLine.js" async defer></script>
+    <!-- Drawing Regular Polygon -->
+    <script src="assets/javascript/drawingRegularPolygon.js" async defer></script>
 
-  <!-- Drawing Regular Polygon -->
-  <script src="assets/javascript/drawingRegularPolygon.js" async defer></script>
+    <!-- Drawing Irregular Polygon -->
+    <script src="assets/javascript/drawingIrregularPolygon.js" async defer></script>
 
-  <!-- Drawing Irregular Polygon -->
-  <script src="assets/javascript/drawingIrregularPolygon.js" async defer></script>
+    <!-- Drawing Rectangle -->
+    <script src="assets/javascript/drawingRectangle.js" async defer></script>
 
-  <!-- Drawing Rectangle -->
-  <script src="assets/javascript/drawingRectangle.js" async defer></script>
+    <!-- Eraser -->
+    <script src="assets/javascript/eraser.js" async defer></script>
 
-  <!-- Eraser -->
-  <script src="assets/javascript/eraser.js" async defer></script>
+    <!-- Export -->
+    <script src="assets/javascript/export.js" async defer></script>
 
-  <!-- Export -->
-  <script src="assets/javascript/export.js" async defer></script>
+    <!-- Fill -->
+    <script src="assets/javascript/fill.js" async defer></script>
 
-  <!-- Fill -->
-  <script src="assets/javascript/fill.js" async defer></script>
+    <!-- Filter -->
+    <script src="assets/javascript/filter.js" async defer></script>
 
-  <!-- Filter -->
-  <script src="assets/javascript/filter.js" async defer></script>
+    <!-- Game -->
+    <script src="assets/javascript/Game/countdown.js" async defer></script>
+    <script src="assets/javascript/Game/charade.js" async defer></script>
 
-  <!-- Game -->
-  <script src="assets/javascript/Game/countdown.js" async defer></script>
-  <script src="assets/javascript/Game/charade.js" async defer></script>
+    <!-- Select -->
+    <script src="assets/javascript/select.js" async defer></script>
 
-  <!-- Select -->
-  <!-- <script src="assets/javascript/select.js" async defer></script> -->
+    <!-- Stamp Emoji -->
+    <script src="assets/javascript/stamp.js" async defer></script>
 
-  <!-- Stamp Emoji -->
-  <script src="assets/javascript/stamp.js" async defer></script>
+    <!-- Text -->
+    <script async defer src="assets/javascript/text.js"></script>
 
-  <!-- Text -->
-  <script async defer src="assets/javascript/text.js"></script>
+    <!--Tooltip-->
+    <!-- <script src="assets/javascript/tooltip.js" async defer></script> -->
 
-  <!--Tooltip-->
-  <!-- <script src="assets/javascript/tooltip.js" async defer></script> -->
+    <!-- Undo / Redo -->
+    <script src="assets/javascript/undoRedo.js" async defer></script>
 
-  <!-- Undo / Redo -->
-  <script src="assets/javascript/undoRedo.js" async defer></script>
+    <!-- Upload -->
+    <script src="assets/javascript/upload.js" async defer></script>
 
-  <!-- Upload -->
-  <script src="assets/javascript/upload.js" async defer></script>
+    <!-- Toolbar -->
+    <script src="assets/javascript/toolbar.js" async defer></script>
 
-  <!-- Toolbar -->
-  <script src="assets/javascript/toolbar.js" async defer></script>
+    <!-- Keypress -->
+    <script src="assets/javascript/keypress.js" async defer></script>
 
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
 
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
-  <!-- FireBase -->
-  <script src="assets/javascript/firebase.js" async defer></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <!-- FireBase -->
+    <script src="assets/javascript/firebase.js" async defer></script>
 </body>
 
 </html>
