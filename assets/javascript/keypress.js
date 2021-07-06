@@ -116,4 +116,4 @@ function KeyPress(e) {
     }
 }
 
-document.onkeydown = KeyPress;b
+document.onkeydown = KeyPress;
