@@ -19,24 +19,38 @@
   /* flex-wrap: wrap; */
 }
 
+
 .header-container-wrapper{
   display:flex;
   flex-direction: column;
-  /* flex-wrap:wrap; */
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container{
+
+}
+
+.timer-box-wrapper{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #timer{
   color:white
+  
 }
 
 #playGame{
   width: 200px;
 }
-#countdown-timer{
+
+.timer-box{
   color: white;
   font-weight: bold;
-  font-size:larger;
+  /* font-size:larger; */
 }
+
 body {
   background-color:#02585B;
   padding: 15px;

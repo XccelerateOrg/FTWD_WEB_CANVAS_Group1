@@ -42,41 +42,41 @@ function server() {
     uploadTask.on('state_changed',  (snapshot) => {
         // Observe state change events such as progress, pause, and resume
         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log('Upload is ' + progress + '% done');
+        // console.log('Upload is ' + progress + '% done');
         switch (snapshot.state) {
             case firebase.storage.TaskState.PAUSED: // or 'paused'
-            console.log('Upload is paused');
+            // console.log('Upload is paused');
             break;
             case firebase.storage.TaskState.RUNNING: // or 'running'
-            console.log('Upload is running');
+            // console.log('Upload is running');
             break;
         }
     },  (error) => {
         // Handle unsuccessful uploads
-        console.log("error");
+        // console.log("error");
     },  () => {
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-        var downloadURL = uploadTask.snapshot.downloadURL;
-        console.log(uploadTask);
-        console.log(uploadTask.snapshot);
-        console.log('File available at', downloadURL);
+        // var downloadURL = uploadTask.snapshot.downloadURL;
+        // console.log(uploadTask);
+        // console.log(uploadTask.snapshot);
+        // console.log('File available at', downloadURL);
 
         storageRef.child('images/canvas.png').getDownloadURL()
   .then((url) => {
       console.log(url);
-      alert('File available at', url);
+      alert(`File is uploaded to Firebase.`);
       
     // `url` is the download URL for 'images/stars.jpg'
 
     // This can be downloaded directly:
-    var xhr = new XMLHttpRequest();
-    xhr.responseType = 'blob';
-    xhr.onload = (event) => {
-      var blob = xhr.response;
-    };
-    xhr.open('GET', url);
-    xhr.send();
+    // var xhr = new XMLHttpRequest();
+    // xhr.responseType = 'blob';
+    // xhr.onload = (event) => {
+    //   var blob = xhr.response;
+    // };
+    // xhr.open('GET', url);
+    // xhr.send();
 
     // Or inserted into an <img> element
     var img = document.getElementById('canvas');

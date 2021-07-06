@@ -67,8 +67,9 @@ $('#regular-polygon-btn').click(() => {
 
 // Drawing Irregular Polygon
 $('#irregular-polygon-btn').click(() => {
-    currentFunction = new DrawingIrregularPolygon(ctx, ctxDraft);
-    console.log(`Drawing Irregular Polygon: ${currentFunction}`)
+    // currentFunction = new DrawingIrregularPolygon(ctx, ctxDraft);
+    // console.log(`Drawing Irregular Polygon: ${currentFunction}`)
+    alert("Irregular Polygon Function: Coming soon!")
 });
 
 // Drawing Rectangle
@@ -108,8 +109,9 @@ $("#fill-btn").click((e) => {
 
 // Select
 $('#select-btn').click(() => {
-    currentFunction = new Select(ctx, ctxDraft);
-    console.log(`Select: ${currentFunction}`)
+    // currentFunction = new Select(ctx, ctxDraft);
+    // console.log(`Select: ${currentFunction}`)
+    alert("Select Function: Coming soon!")
 });
 
 // Text
@@ -137,7 +139,7 @@ $('#zoom-btn').click(() => {
 
 $(`#firebase`).click(() => {
     server();
-    console.log(`server`)
+    console.log(`Server`)
 })
 
 $(`#heart-btn`).click(() => {
